@@ -1,0 +1,21 @@
+# Ignora todos los archivos con los siguientes formatos
+*.exe
+*.pdb
+*.lib
+*.idb
+*.dll
+*.exp
+*.log
+*.vcxproj.user
+
+# Ignora los siguientes directorios
+.vs
+temp
+lib
+bin/TapiocaFiles
+
+# Ignora todas los directorios que se llamen 'build'
+build/
+
+# Ignora el archivo de plugins.cfg
+plugins.cfg
