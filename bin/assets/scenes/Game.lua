@@ -28,7 +28,7 @@ scene = {
                 scaleY = WINDOW_WIDTH/14.0
             },
             ImageTextButton = {
-                onClickId = "ExitButtonClick",
+                onClickId = "AdiosButton",
                 imagePathNormal = "Button/return1.png",
                 imagePathHover = "Button/return2.png",
                 imagePathActive = "Button/return3.png",

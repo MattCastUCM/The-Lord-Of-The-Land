@@ -1,12 +1,6 @@
 scene = {
   {
     components = {
-        
-        hola = {
-            changeTime = 2000,
-            splashScene = "StartScene",
-            mainScene = "Managers"
-        },
         debugComp={}
     }
   },

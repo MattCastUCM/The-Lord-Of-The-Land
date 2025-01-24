@@ -14,7 +14,7 @@ scene = {
             },
             Image = {
                 name = "Tapiocimagen",
-                imagePath = "MainMenu.png",
+                imagePath = "mainMenuBackground.png",
                 windowFlags= ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoFocusOnAppearing |ImGuiWindowFlags_NoInputs
             }
            }
@@ -22,13 +22,13 @@ scene = {
     StartImageTextButton = {
         components = {
             Transform = {
-                positionX = WINDOW_WIDTH / 1.7,
-                positionY = WINDOW_HEIGHT / 2,
+                positionX = WINDOW_WIDTH / 1.5,
+                positionY = WINDOW_HEIGHT / 3,
                 scaleX = WINDOW_WIDTH/6.0,
                 scaleY = WINDOW_WIDTH/6.0,
             },
             ImageTextButton = {
-                onClickId = "hola",
+                onClickId = "MainMenuButton",
                 imagePathNormal = "Button/play3.png",
                 imagePathHover = "Button/play1.png",
                 imagePathActive = "Button/play2.png",
@@ -38,38 +38,19 @@ scene = {
             }
         }
     },
-    inforButton={
+    ExitImageTextButton = {
         components = {
             Transform = {
-                positionX = WINDOW_WIDTH *0.9,
-                positionY = WINDOW_HEIGHT*0.1,
-                scaleX = WINDOW_WIDTH/14.0,
-                scaleY = WINDOW_WIDTH/14.0
+                positionX = WINDOW_WIDTH / 1.5,
+                positionY = WINDOW_HEIGHT*2 /3,
+                scaleX = WINDOW_WIDTH/6.0,
+                scaleY = WINDOW_WIDTH/6.0,
             },
             ImageTextButton = {
-                onClickId = "HolaButton",
-                imagePathNormal = "Button/infor1.png",
-                imagePathHover = "Button/infor2.png",
-                imagePathActive = "Button/infor3.png",
-                normalColorA = 0.0,
-                hoverColorA = 0.0,
-                activeColorA = 0.0,
-            }
-        }
-    },
-    ExitButton={
-        components = {
-            Transform = {
-                positionX = WINDOW_WIDTH *0.07,
-                positionY = WINDOW_HEIGHT*0.9,
-                scaleX = WINDOW_WIDTH/14.0,
-                scaleY = WINDOW_WIDTH/14.0
-            },
-            ImageTextButton = {
-                onClickId = "hola",
-                imagePathNormal = "Button/return1.png",
-                imagePathHover = "Button/return2.png",
-                imagePathActive = "Button/return3.png",
+                onClickId = "ExitButton",
+                imagePathNormal = "Button/play3.png",
+                imagePathHover = "Button/play1.png",
+                imagePathActive = "Button/play2.png",
                 normalColorA = 0.0,
                 hoverColorA = 0.0,
                 activeColorA = 0.0,

@@ -8,8 +8,8 @@ function hola()
 end
 
 function MainMenuButton()
-	Tapioca.deleteScene(self.splashScene)
-	Tapioca.loadScene(self.mainScene)
+	Tapioca.deleteScene("MainMenu")
+	Tapioca.loadScene("Game")
 end
 
 function ExitButton()
@@ -18,4 +18,8 @@ end
 
 function HolaButton()
 	_internal.comp.pushEvent(_internal.comp, "Hola", true, true)
+end
+
+function AdiosButton()
+	_G["GameManager"].emmmmmm()
 end
