@@ -13,8 +13,7 @@ function MainMenuButton()
 end
 
 function ExitButton()
-	Tapioca.deleteScene(self.splashScene)
-	Tapioca.loadScene(self.mainScene)
+	Tapioca.exit()
 end
 
 function HolaButton()

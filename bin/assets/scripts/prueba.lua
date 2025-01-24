@@ -27,4 +27,17 @@ end
 
 function comp:handleEvent(id)
 	print("Evento: "..id )
+	self:addLine(100.0,100.0,200.0,200.0)
+end
+
+function comp:addLine(posX,posY,posX2,posY2)
+	local obj = self.object.scene:addObject("", 1)
+	local p = {
+		startPositionX = posX,
+		startPositionY= posY,
+		endPositionX= posX2,
+		endPositionY= posY2
+	}
+	obj:addComponent("Line",p)
+	
 end
