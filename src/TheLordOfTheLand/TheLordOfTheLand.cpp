@@ -14,7 +14,7 @@ void addComponentFactories() {
 
 const char* getWindowName() { return "The Lord of the Land"; }
 
-bool getFullScreen() { return false; }
+bool getFullScreen() { return true; }
 
 void getWindowSize(uint32_t& width, uint32_t& height) {
     width = 1280;
