@@ -98,9 +98,11 @@ xcopy "$(SolutionDir)bin\game.dll" "$(SolutionDir)TapiocaEngine\bin\" /y /r</Com
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\TheLordOfTheLand\debugComp.cpp" />
     <ClCompile Include="..\..\src\TheLordOfTheLand\TheLordOfTheLand.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\TheLordOfTheLand\debugComp.h" />
     <ClInclude Include="..\..\src\TheLordOfTheLand\TheLordOfTheLand.h" />
     <ClInclude Include="..\..\src\TheLordOfTheLand\gameDefs.h" />
   </ItemGroup>

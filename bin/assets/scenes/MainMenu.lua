@@ -28,7 +28,7 @@ scene = {
                 scaleY = WINDOW_WIDTH/6.0,
             },
             ImageTextButton = {
-                onClickId = "MainMenuButtonClick",
+                onClickId = "hola",
                 imagePathNormal = "Button/play3.png",
                 imagePathHover = "Button/play1.png",
                 imagePathActive = "Button/play2.png",
@@ -47,7 +47,7 @@ scene = {
                 scaleY = WINDOW_WIDTH/14.0
             },
             ImageTextButton = {
-                onClickId = "ControlsButtonClick",
+                onClickId = "HolaButton",
                 imagePathNormal = "Button/infor1.png",
                 imagePathHover = "Button/infor2.png",
                 imagePathActive = "Button/infor3.png",
@@ -66,7 +66,7 @@ scene = {
                 scaleY = WINDOW_WIDTH/14.0
             },
             ImageTextButton = {
-                onClickId = "ExitButtonClick",
+                onClickId = "hola",
                 imagePathNormal = "Button/return1.png",
                 imagePathHover = "Button/return2.png",
                 imagePathActive = "Button/return3.png",
@@ -74,6 +74,11 @@ scene = {
                 hoverColorA = 0.0,
                 activeColorA = 0.0,
             }
+        }
+    },
+    {
+        components = {
+            prueba={}
         }
     }
 }

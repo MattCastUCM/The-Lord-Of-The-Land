@@ -1,7 +1,7 @@
 #include "TheLordOfTheLand.h"
 #include "Structure/FactoryManager.h"
 #include "Structure/BasicBuilder.h"
-
+#include "debugComp.h"
 void init() { 
     addComponentFactories(); 
 }
@@ -10,11 +10,13 @@ void addComponentFactories() {
     Tapioca::logInfo("Anadiendo las factorias del juego");
 
     Tapioca::FactoryManager* factMngr = Tapioca::FactoryManager::instance();
+    factMngr->addBuilder(new Tapioca::BasicBuilder<debugComp>());
+
 }
 
 const char* getWindowName() { return "The Lord of the Land"; }
 
-bool getFullScreen() { return true; }
+bool getFullScreen() { return false; }
 
 void getWindowSize(uint32_t& width, uint32_t& height) {
     width = 1280;

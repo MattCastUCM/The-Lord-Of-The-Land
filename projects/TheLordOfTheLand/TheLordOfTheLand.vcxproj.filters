@@ -21,6 +21,9 @@
     <ClCompile Include="..\..\src\TheLordOfTheLand\TheLordOfTheLand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\TheLordOfTheLand\debugComp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\TheLordOfTheLand\TheLordOfTheLand.h">
@@ -28,6 +31,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\TheLordOfTheLand\gameDefs.h">
       <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\TheLordOfTheLand\debugComp.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
