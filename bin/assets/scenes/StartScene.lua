@@ -3,13 +3,13 @@ scene = {
         components = {
             CameraComponent = { },
             SplashScreenComponent = {
-                changeTime = 2000,
+                changeTime = 5000,
                 splashScene = "StartScene",
                 mainScene = "Managers"
             }
         }
     },
-    backgroundImage = {
+    bgButton={
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2,
@@ -17,8 +17,14 @@ scene = {
                 scaleX = WINDOW_WIDTH,
                 scaleY = WINDOW_HEIGHT
             },
-            Image = {
-                imagePath = "mainMenuBackground.png"
+            ImageTextButton = {
+                onClickId = "skipSplashScreen",
+                imagePathNormal = "mainMenuBackground.png",
+                imagePathHover = "mainMenuBackground.png",
+                imagePathActive = "mainMenuBackground.png",
+                normalColorA = 0.0,
+                hoverColorA = 0.0,
+                activeColorA = 0.0,
             }
         }
     }

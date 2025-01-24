@@ -1,10 +1,14 @@
-function debug(text)
-	print("Se hizo clic/enter: " .. text)
+function skipSplashScreen()
+	Tapioca.deleteScene("StartScene")
+	Tapioca.loadScene("MainMenu")
 end
 
+function closeGame()
+	Tapioca.exit()
+end
 
-function hola()
-	print("hola" )
+function startGame()
+	-- Tapioca.exit()
 end
 
 function MainMenuButton()
@@ -12,8 +16,14 @@ function MainMenuButton()
 	Tapioca.loadScene("Game")
 end
 
-function ExitButton()
-	Tapioca.exit()
+
+
+function debug(text)
+	print("Se hizo clic/enter: " .. text)
+end
+
+function hola()
+	print("hola" )
 end
 
 function HolaButton()

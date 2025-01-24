@@ -13,44 +13,43 @@ scene = {
                 scaleY = WINDOW_HEIGHT
             },
             Image = {
-                name = "Tapiocimagen",
-                imagePath = "mainMenuBackground.png",
+                imagePath = "mainMenuBg.png",
                 windowFlags= ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoFocusOnAppearing |ImGuiWindowFlags_NoInputs
             }
            }
     },
-    StartImageTextButton = {
+    startButton = {
         components = {
             Transform = {
-                positionX = WINDOW_WIDTH / 1.5,
-                positionY = WINDOW_HEIGHT / 3,
-                scaleX = WINDOW_WIDTH/6.0,
-                scaleY = WINDOW_WIDTH/6.0,
+                positionX = 1450.0,
+                positionY = 340.0,
+                scaleX = 511.0,
+                scaleY = 343.0
             },
             ImageTextButton = {
-                onClickId = "MainMenuButton",
-                imagePathNormal = "Button/play3.png",
-                imagePathHover = "Button/play1.png",
-                imagePathActive = "Button/play2.png",
+                onClickId = "startGame",
+                imagePathNormal = "buttons/yesButtonNormal.png",
+                imagePathHover = "buttons/yesButtonHovered.png",
+                imagePathActive = "buttons/yesButtonPressed.png",
                 normalColorA = 0.0,
                 hoverColorA = 0.0,
                 activeColorA = 0.0,
             }
         }
     },
-    ExitImageTextButton = {
+    exitButton={
         components = {
             Transform = {
-                positionX = WINDOW_WIDTH / 1.5,
-                positionY = WINDOW_HEIGHT*2 /3,
-                scaleX = WINDOW_WIDTH/6.0,
-                scaleY = WINDOW_WIDTH/6.0,
+                positionX = 1450.0,
+                positionY = 810.0,
+                scaleX = 520.0,
+                scaleY = 292.0
             },
             ImageTextButton = {
-                onClickId = "ExitButton",
-                imagePathNormal = "Button/play3.png",
-                imagePathHover = "Button/play1.png",
-                imagePathActive = "Button/play2.png",
+                onClickId = "closeGame",
+                imagePathNormal = "buttons/noButtonNormal.png",
+                imagePathHover = "buttons/noButtonHovered.png",
+                imagePathActive = "buttons/noButtonPressed.png",
                 normalColorA = 0.0,
                 hoverColorA = 0.0,
                 activeColorA = 0.0,
@@ -63,4 +62,3 @@ scene = {
         }
     }
 }
-  
