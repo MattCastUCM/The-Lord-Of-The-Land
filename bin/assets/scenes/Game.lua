@@ -125,120 +125,137 @@ scene = {
 			},
 		},
 		children = {
-			Graph={
+			desktopBg = {
+                zIndex = 1,
                 components = {
                     Transform = {
-                        positionX = WINDOW_WIDTH *0.065 + WINDOW_WIDTH *0.25,
-                        positionY = WINDOW_HEIGHT*0.74,
-                        scaleX = WINDOW_WIDTH/15.5,
-                        scaleY = WINDOW_WIDTH/15.5
+                        positionX = WINDOW_WIDTH / 2,
+                        positionY = WINDOW_HEIGHT / 2,
+                        scaleX = WINDOW_WIDTH,
+                        scaleY = WINDOW_HEIGHT
                     },
-                    ImageTextButton = {
-                        onClickId = "ToMainMenuButton",
-                        imagePathNormal = "desktopicons/GraphIcon.png",
-                        imagePathHover = "desktopicons/GraphIcon.png",
-                        imagePathActive = "desktopicons/GraphIcon.png",
-                        normalColorA = 0.0,
-                        hoverColorA = 0.0,
-                        activeColorA = 0.0,
+                    Image = {
+                        imagePath = "desktop/computerBg.png"
                     }
                 }
             },
-            Stocks={
+            -- windowBg = {
+            --     zIndex = 2,
+            --     components = {
+            --         Transform = {
+            --             positionX = WINDOW_WIDTH / 2,
+            --             positionY = WINDOW_HEIGHT / 2,
+            --             scaleX = WINDOW_WIDTH,
+            --             scaleY = WINDOW_HEIGHT
+            --         },
+            --         Image = {
+            --             imagePath = "desktop/windowFrame.png"
+            --         }
+            --     }
+            -- },
+            graphButton = {
+                zIndex = 2,
                 components = {
                     Transform = {
-                        positionX = WINDOW_WIDTH *0.065*2+ WINDOW_WIDTH *0.25,
-                        positionY = WINDOW_HEIGHT*0.74,
-                        scaleX = WINDOW_WIDTH/15.5,
-                        scaleY = WINDOW_WIDTH/15.5
+                        positionX = 572.0,
+                        positionY = 839.0,
+                        scaleX = 60.0,
+                        scaleY = 50.0
                     },
                     ImageTextButton = {
-                        onClickId = "ToMainMenuButton",
-                        imagePathNormal = "desktopicons/StocksIcon.png",
-                        imagePathHover = "desktopicons/StocksIcon.png",
-                        imagePathActive = "desktopicons/StocksIcon.png",
-                        normalColorA = 0.0,
-                        hoverColorA = 0.0,
-                        activeColorA = 0.0,
+                        onClickId = "",
+                        imagePathNormal = "desktop/graphIconNormal.png",
+                        imagePathHover = "desktop/graphIconHovered.png",
+                        imagePathActive = "desktop/graphIconPressed.png"
                     }
                 }
             },
-            Housing={
+            stocksButton = {
+                zIndex = 2,
                 components = {
                     Transform = {
-                        positionX = WINDOW_WIDTH *0.065*3+ WINDOW_WIDTH *0.25,
-                        positionY = WINDOW_HEIGHT*0.74,
-                        scaleX = WINDOW_WIDTH/14.5,
-                        scaleY = WINDOW_WIDTH/14.5
+                        positionX = 631.0,
+                        positionY = 839.0,
+                        scaleX = 60.0,
+                        scaleY = 50.0
                     },
                     ImageTextButton = {
-                        onClickId = "ToMainMenuButton",
-                        imagePathNormal = "desktopicons/HousingIcon.png",
-                        imagePathHover = "desktopicons/HousingIcon.png",
-                        imagePathActive = "desktopicons/HousingIcon.png",
-                        normalColorA = 0.0,
-                        hoverColorA = 0.0,
-                        activeColorA = 0.0,
+                        onClickId = "",
+                        imagePathNormal = "desktop/stocksIconNormal.png",
+                        imagePathHover = "desktop/stocksIconHovered.png",
+                        imagePathActive = "desktop/stocksIconPressed.png"
                     }
                 }
             },
-            Corruption={
+            housingButton = {
+                zIndex = 2,
                 components = {
                     Transform = {
-                        positionX = WINDOW_WIDTH *0.065*4+ WINDOW_WIDTH *0.25,
-                        positionY = WINDOW_HEIGHT*0.74,
-                        scaleX = WINDOW_WIDTH/14.5,
-                        scaleY = WINDOW_WIDTH/14.5
+                        positionX = 692.0,
+                        positionY = 837.0,
+                        scaleX = 60.0,
+                        scaleY = 50.0
                     },
                     ImageTextButton = {
-                        onClickId = "ToMainMenuButton",
-                        imagePathNormal = "desktopicons/CorruptionIcon.png",
-                        imagePathHover = "desktopicons/CorruptionIcon.png",
-                        imagePathActive = "desktopicons/CorruptionIcon.png",
-                        normalColorA = 0.0,
-                        hoverColorA = 0.0,
-                        activeColorA = 0.0,
+                        onClickId = "",
+                        imagePathNormal = "desktop/housingIconNormal.png",
+                        imagePathHover = "desktop/housingIconHovered.png",
+                        imagePathActive = "desktop/housingIconPressed.png"
                     }
                 }
             },
-            Casino={
+            corruptionButton = {
+                zIndex = 2,
                 components = {
                     Transform = {
-                        positionX = WINDOW_WIDTH *0.065*5+ WINDOW_WIDTH *0.25,
-                        positionY = WINDOW_HEIGHT*0.74,
-                        scaleX = WINDOW_WIDTH/14.5,
-                        scaleY = WINDOW_WIDTH/14.5
+                        positionX = 751.0,
+                        positionY = 838.0,
+                        scaleX = 60.0,
+                        scaleY = 50.0
                     },
                     ImageTextButton = {
-                        onClickId = "ToMainMenuButton",
-                        imagePathNormal = "desktopicons/CasinoIcon.png",
-                        imagePathHover = "desktopicons/CasinoIcon.png",
-                        imagePathActive = "desktopicons/CasinoIcon.png",
-                        normalColorA = 0.0,
-                        hoverColorA = 0.0,
-                        activeColorA = 0.0,
+                        onClickId = "",
+                        imagePathNormal = "desktop/corruptionIconNormal.png",
+                        imagePathHover = "desktop/corruptionIconHovered.png",
+                        imagePathActive = "desktop/corruptionIconPressed.png"
                     }
                 }
-            }
+            },
+            casinoButton = {
+                zIndex = 2,
+                components = {
+                    Transform = {
+                        positionX = 807.0,
+                        positionY = 838.0,
+                        scaleX = 60.0,
+                        scaleY = 50.0
+                    },
+                    ImageTextButton = {
+                        onClickId = "",
+                        imagePathNormal = "desktop/casinoIconNormal.png",
+                        imagePathHover = "desktop/casinoIconHovered.png",
+                        imagePathActive = "desktop/casinoIconPressed.png"
+                    }
+                }
+            },
         }
     },
-    Time={
+    time = {
         components={
             Transform = {
-                positionX = WINDOW_WIDTH *0.065*6+ WINDOW_WIDTH *0.25,
-                positionY = WINDOW_HEIGHT*0.74,
+                positionX = 1290.0,
+                positionY = 839.0,
               
             },
             Text = {
-                text = "$1023102",
-                textSize = 85.0,
-                textFontName = "BebasNeue-Regular.ttf"
+                text = "",
+                textSize = 30.0,
+                textFontName = "FRABK.TTF"
             },
             TimeManager = { },
-            -- prueba = { }
         }
     },
-     {
+    graph = {
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH *0.065 + WINDOW_WIDTH *0.25,
@@ -246,6 +263,6 @@ scene = {
             },
             DrawGraph = { }
         }
-    }
+    },
 }
   
