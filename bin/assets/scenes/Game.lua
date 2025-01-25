@@ -12,7 +12,7 @@ scene = {
                 targetToLookX = 0.0,
                 targetToLookY = 0.0,
                 -- targetToLookZ = -5.0
-            }
+            },
         }
     },
     light = {
@@ -35,6 +35,7 @@ scene = {
         },
     },
 
+    
     table = {
         components = {
             Transform = {
@@ -110,7 +111,6 @@ scene = {
         }
     },
 
-
     {
         components = {
             DrawGraph = { }
@@ -126,7 +126,7 @@ scene = {
                 scaleY = WINDOW_WIDTH/14.0
             },
             ImageTextButton = {
-                onClickId = "ToMainMenuButton",
+                onClickId = "toMainMenu",
                 imagePathNormal = "Button/return1.png",
                 imagePathHover = "Button/return2.png",
                 imagePathActive = "Button/return3.png",
@@ -135,6 +135,7 @@ scene = {
                 activeColorA = 0.0,
             }
         }
-    }
+    },
+
 }
   

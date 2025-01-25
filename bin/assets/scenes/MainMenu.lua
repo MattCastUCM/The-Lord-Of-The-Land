@@ -1,24 +1,79 @@
 scene = {
-    {
+    camera = {
         components = {
-            CameraComponent = { }
+            Transform = {
+                positionY = 1.4,
+                positionZ = -2.3
+            },
+            CameraComponent = { 
+                bgColorR = 0.0,
+                bgColorG = 0.0,
+                bgColorB = 0.0,
+                targetToLookX = 0.0,
+                targetToLookY = -1.5,
+                targetToLookZ = -5.0
+            },
+        }
+    },
+    light = {
+        components = {
+            Transform = {
+                positionY = 0.0,
+                rotationZ = 0.0
+            },
+            LightDirComp = {
+                directionX = 0.0,
+                directionY = -2.0,
+                directionZ = -1.0,
+                mainLight = true,
+                colorR = 1.0,
+                colorG = 1.0,
+                colorB = 1.0,
+                colorA = 1.0,
+                powerScale = 2.0
+            },  
+        },
+    },
+     light2 = {
+        components = {
+            Transform = {
+                positionY = 0.0,
+                rotationZ = 0.0
+            },
+            LightDirComp = {
+                directionX = 0.0,
+                directionY = -2.0,
+                directionZ = 1.0,
+                mainLight = true,
+                colorR = 1.0,
+                colorG = 1.0,
+                colorB = 1.0,
+                colorA = 1.0,
+                powerScale = 2.0
+            },  
+        },
+    },
+    table = {
+        components = {
+            Transform = {
+                positionX = 0.0,
+                positionY = -3.6,
+                positionZ = -4.0,
+                scaleX = 1.1,
+                scaleY = 1.1,
+                scaleZ = 1.1,
+                rotationX = -90.0,
+                rotationY = -90.0,
+                rotationZ = 0.0,
+            },
+            MeshRenderer = {
+                meshName = "models/Desk.mesh",
+                materialName = "materialtable"
+            }
         }
     },
 
-    bgImage = {
-        components = {
-            Transform = {
-                positionX = WINDOW_WIDTH / 2,
-                positionY = WINDOW_HEIGHT / 2,
-                scaleX = WINDOW_WIDTH,
-                scaleY = WINDOW_HEIGHT
-            },
-            Image = {
-                imagePath = "mainMenuBg.png",
-                windowFlags= ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoFocusOnAppearing |ImGuiWindowFlags_NoInputs
-            }
-           }
-    },
+
     startButton = {
         components = {
             Transform = {
@@ -57,17 +112,4 @@ scene = {
             }
         }
     },
-    bgButton={
-        components = {
-            Transform = {
-                positionX = WINDOW_WIDTH / 2,
-                positionY = WINDOW_HEIGHT / 2,
-                scaleX = WINDOW_WIDTH,
-                scaleY = WINDOW_HEIGHT
-            },
-            Image = {
-                imagePath = "mainMenuBackground.png"
-            }
-        }
-    }
 }

@@ -1,14 +1,14 @@
 scene = {
     {
         components = {
-            GameOverSetup = {}
+            WinSetup = {}
         }
     },
-    durationText = {
+    scoreText = {
         components = {
             Transform = {
                 positionX = 436.0,
-                positionY = 467.0
+                positionY = 685.0
             },
             Text = {
                 text = "",
@@ -20,11 +20,11 @@ scene = {
             },
         }
     },
-    scoreText = {
+    highScoreText = {
         components = {
             Transform = {
                 positionX = 436.0,
-                positionY = 685.0
+                positionY = 467.0
             },
             Text = {
                 text = "",
@@ -45,7 +45,7 @@ scene = {
                 scaleY = WINDOW_HEIGHT
             },
             Image = {
-                imagePath = "gameOverBackground.png"
+                imagePath = "winBackground.png"
             }
         }
     },

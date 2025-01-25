@@ -7,6 +7,9 @@ function comp:start()
     Tapioca.loadScene("MainMenu")
 
     self.currentMoney = 0
+    self.totalScore = 21312313
+    self.currentDay = 1
+    self.highScore = 1203
 end
 
 function comp:initComponent(variables)
