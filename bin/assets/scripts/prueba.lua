@@ -27,7 +27,6 @@ end
 
 function comp:handleEvent(id)
 	print("Evento: "..id )
-	self:addLine(100.0,100.0,200.0,200.0)
 end
 
 function comp:addLine(posX,posY,posX2,posY2)

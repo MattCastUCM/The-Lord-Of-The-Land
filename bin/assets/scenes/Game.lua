@@ -110,32 +110,142 @@ scene = {
             
         }
     },
-
-    {
-        components = {
-            DrawGraph = { }
-        }
-    },
-    
-    ExitButton={
-        components = {
-            Transform = {
-                positionX = WINDOW_WIDTH *0.07,
-                positionY = WINDOW_HEIGHT*0.9,
-                scaleX = WINDOW_WIDTH/14.0,
-                scaleY = WINDOW_WIDTH/14.0
+    UI = {
+		components = {
+			Transform = {
+				positionX = 0.0,
+				positionY = 0.0,
+				positionZ = 0.0,
+				scaleX = 1.0,
+				scaleY = 1.0,
+				scaleZ = 1.0,
+				rotationX = 0.0,
+				rotationY = 0.0,
+				rotationZ = 0.0
+			},
+		},
+		children = {
+			Graph={
+                components = {
+                    Transform = {
+                        positionX = WINDOW_WIDTH *0.065 + WINDOW_WIDTH *0.25,
+                        positionY = WINDOW_HEIGHT*0.74,
+                        scaleX = WINDOW_WIDTH/15.5,
+                        scaleY = WINDOW_WIDTH/15.5
+                    },
+                    ImageTextButton = {
+                        onClickId = "ToMainMenuButton",
+                        imagePathNormal = "desktopicons/GraphIcon.png",
+                        imagePathHover = "desktopicons/GraphIcon.png",
+                        imagePathActive = "desktopicons/GraphIcon.png",
+                        normalColorA = 0.0,
+                        hoverColorA = 0.0,
+                        activeColorA = 0.0,
+                    }
+                }
             },
-            ImageTextButton = {
-                onClickId = "toMainMenu",
-                imagePathNormal = "Button/return1.png",
-                imagePathHover = "Button/return2.png",
-                imagePathActive = "Button/return3.png",
-                normalColorA = 0.0,
-                hoverColorA = 0.0,
-                activeColorA = 0.0,
+            Stocks={
+                components = {
+                    Transform = {
+                        positionX = WINDOW_WIDTH *0.065*2+ WINDOW_WIDTH *0.25,
+                        positionY = WINDOW_HEIGHT*0.74,
+                        scaleX = WINDOW_WIDTH/15.5,
+                        scaleY = WINDOW_WIDTH/15.5
+                    },
+                    ImageTextButton = {
+                        onClickId = "ToMainMenuButton",
+                        imagePathNormal = "desktopicons/StocksIcon.png",
+                        imagePathHover = "desktopicons/StocksIcon.png",
+                        imagePathActive = "desktopicons/StocksIcon.png",
+                        normalColorA = 0.0,
+                        hoverColorA = 0.0,
+                        activeColorA = 0.0,
+                    }
+                }
+            },
+            Housing={
+                components = {
+                    Transform = {
+                        positionX = WINDOW_WIDTH *0.065*3+ WINDOW_WIDTH *0.25,
+                        positionY = WINDOW_HEIGHT*0.74,
+                        scaleX = WINDOW_WIDTH/14.5,
+                        scaleY = WINDOW_WIDTH/14.5
+                    },
+                    ImageTextButton = {
+                        onClickId = "ToMainMenuButton",
+                        imagePathNormal = "desktopicons/HousingIcon.png",
+                        imagePathHover = "desktopicons/HousingIcon.png",
+                        imagePathActive = "desktopicons/HousingIcon.png",
+                        normalColorA = 0.0,
+                        hoverColorA = 0.0,
+                        activeColorA = 0.0,
+                    }
+                }
+            },
+            Corruption={
+                components = {
+                    Transform = {
+                        positionX = WINDOW_WIDTH *0.065*4+ WINDOW_WIDTH *0.25,
+                        positionY = WINDOW_HEIGHT*0.74,
+                        scaleX = WINDOW_WIDTH/14.5,
+                        scaleY = WINDOW_WIDTH/14.5
+                    },
+                    ImageTextButton = {
+                        onClickId = "ToMainMenuButton",
+                        imagePathNormal = "desktopicons/CorruptionIcon.png",
+                        imagePathHover = "desktopicons/CorruptionIcon.png",
+                        imagePathActive = "desktopicons/CorruptionIcon.png",
+                        normalColorA = 0.0,
+                        hoverColorA = 0.0,
+                        activeColorA = 0.0,
+                    }
+                }
+            },
+            Casino={
+                components = {
+                    Transform = {
+                        positionX = WINDOW_WIDTH *0.065*5+ WINDOW_WIDTH *0.25,
+                        positionY = WINDOW_HEIGHT*0.74,
+                        scaleX = WINDOW_WIDTH/14.5,
+                        scaleY = WINDOW_WIDTH/14.5
+                    },
+                    ImageTextButton = {
+                        onClickId = "ToMainMenuButton",
+                        imagePathNormal = "desktopicons/CasinoIcon.png",
+                        imagePathHover = "desktopicons/CasinoIcon.png",
+                        imagePathActive = "desktopicons/CasinoIcon.png",
+                        normalColorA = 0.0,
+                        hoverColorA = 0.0,
+                        activeColorA = 0.0,
+                    }
+                }
             }
         }
     },
-
+    Time={
+        components={
+            Transform = {
+                positionX = WINDOW_WIDTH *0.065*6+ WINDOW_WIDTH *0.25,
+                positionY = WINDOW_HEIGHT*0.74,
+              
+            },
+            Text = {
+                text = "$1023102",
+                textSize = 85.0,
+                textFontName = "BebasNeue-Regular.ttf"
+            },
+            TimeManager = { },
+            -- prueba = { }
+        }
+    },
+     {
+        components = {
+            Transform = {
+                positionX = WINDOW_WIDTH *0.065 + WINDOW_WIDTH *0.25,
+                positionY = WINDOW_HEIGHT*0.65,
+            },
+            DrawGraph = { }
+        }
+    }
 }
   
