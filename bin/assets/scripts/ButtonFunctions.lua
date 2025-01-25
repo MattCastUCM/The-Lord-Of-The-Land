@@ -1,6 +1,6 @@
 function skipSplashScreen()
 	Tapioca.deleteScene("StartScene")
-	Tapioca.loadScene("MainMenu")
+	Tapioca.loadScene("Managers")
 end
 
 function closeGame()
