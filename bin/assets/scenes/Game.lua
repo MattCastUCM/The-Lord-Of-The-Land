@@ -6,6 +6,11 @@ scene = {
     },
     {
         components = {
+            DrawGraph = { }
+        }
+    },
+    {
+        components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2,
                 positionY = WINDOW_HEIGHT / 2,
@@ -28,7 +33,7 @@ scene = {
                 scaleY = WINDOW_WIDTH/14.0
             },
             ImageTextButton = {
-                onClickId = "AdiosButton",
+                onClickId = "ToMainMenuButton",
                 imagePathNormal = "Button/return1.png",
                 imagePathHover = "Button/return2.png",
                 imagePathActive = "Button/return3.png",

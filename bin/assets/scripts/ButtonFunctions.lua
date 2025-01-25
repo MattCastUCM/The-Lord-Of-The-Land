@@ -17,13 +17,18 @@ function MainMenuButton()
 end
 
 
-
 function debug(text)
 	print("Se hizo clic/enter: " .. text)
 end
 
-function hola()
-	print("hola" )
+
+function ToMainMenuButton()
+	Tapioca.deleteScene("Game")
+	Tapioca.loadScene("MainMenu")
+end
+
+function ExitButton()
+	Tapioca.exit()
 end
 
 function HolaButton()
