@@ -8,10 +8,6 @@ function closeGame()
 end
 
 function startGame()
-	-- Tapioca.exit()
-end
-
-function MainMenuButton()
 	Tapioca.deleteScene("MainMenu")
 	Tapioca.loadScene("Game")
 end
