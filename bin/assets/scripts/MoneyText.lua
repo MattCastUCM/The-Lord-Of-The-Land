@@ -29,11 +29,6 @@ function comp:handleEvent(id)
         self.transform.position = self.initPos
         self.initPos.x = self.initPos.x + width / 2.0
     end
-
-    -- if id == "ev_CHEAT" then
-    --     self.gameManager.currentMoney = self.gameManager.currentMoney * 10
-    --     self:pushEvent("MONEY_CHANGED")
-    -- end
 end
 
 -- function comp:update(deltaTime)
