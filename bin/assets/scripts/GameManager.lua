@@ -21,7 +21,7 @@ function comp:startGame()
     self.stocksPrices = { 20, 50, 80, 42 }
     self.numberStocks = { 0, 0, 0, 0 }
 
-    self.taxes = 10.0
+    self.taxes = 101.0
 
     Tapioca.loadScene("Game")
 end
@@ -157,7 +157,7 @@ function comp:calculateTotalCapital()
 
     self.totalScore = self.totalScore + result
     if self.totalScore > self.highScore then
-        self.highScore = self.highScore
+        self.highScore = self.totalScore
     end
 end
 
@@ -212,9 +212,9 @@ end
 function comp:sellStocks(index)
     local nProperties = self.numberStocks[index]
     if nProperties > 0 then
-        local price = self.stocksPrices[index]
-        self.currentMoney = self.currentMoney + price
-        
+        -- local price = self.stocksPrices[index]
+        self.currentMoney = self.currentMoney + self.stocksPrices[index]
+        print("SDASDASDASDAS ".. self.stocksPrices[index])
         self.numberStocks[index] = nProperties - 1
         
         local eventName = "INVERT_" .. index

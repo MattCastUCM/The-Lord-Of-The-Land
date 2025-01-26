@@ -40,17 +40,17 @@ function comp:openWindow(index, sceneName)
         if Tapioca.getScene(sceneName) == nil then
             Tapioca.loadScene(sceneName)
         else 
-            Tapioca.getScene(sceneName).active = true
+            Tapioca.getScene(sceneName).visible = true
         end
         self.currScreenName = sceneName
     end
 end
 
 
-function comp:closeCurrWindow() 
+function comp:closeCurrWindow()
     if self.currScreen ~= "" then
         if Tapioca.getScene(self.currScreenName) ~= nil then
-            Tapioca.getScene(self.currScreenName).active = false
+            Tapioca.getScene(self.currScreenName).visible = false
         end
         self.currScreenName = ""
     end
@@ -92,13 +92,15 @@ end
 
 function comp:update(deltaTime)
     if self.nUpdates < 1 then
-        Tapioca.getScene("GraphScene").active = false
-        Tapioca.getScene("StocksScene").active = false
-        Tapioca.getScene("PropertyScene").active = false
-        Tapioca.getScene("CorruptionScene").active = false
-        Tapioca.getScene("CasinoScene").active = false
+        Tapioca.getScene("GraphScene").visible = false
+        Tapioca.getScene("StocksScene").visible = false
+        Tapioca.getScene("PropertyScene").visible = false
+        Tapioca.getScene("CorruptionScene").visible = false
+        Tapioca.getScene("CasinoScene").visible = false
         self.nUpdates = self.nUpdates + 1
     end
+
+    -- print(Tapioca.getScene("CasinoScene").visible)
 end
 
 function openGraph()

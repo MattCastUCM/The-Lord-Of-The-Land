@@ -48,6 +48,7 @@ function comp:start()
         if not self.activated then
             if self.nextFree then
                 self:roll()
+                self.nextFree= false
             elseif GameManager.currentMoney >= self.ROLL_COST then
                 GameManager.currentMoney = GameManager.currentMoney - self.ROLL_COST
                 self:pushEvent("MONEY_CHANGED", true, false)
