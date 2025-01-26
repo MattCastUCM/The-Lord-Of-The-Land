@@ -1,13 +1,13 @@
 scene = {
-    -- CASA 1
+    -- ACCION 1
     {
-    -- InitX --> WINDOW_WIDTH / 2 - 200
-    -- InitY --> WINDOW_HEIGHT / 2 - 185
+        -- InitX --> WINDOW_WIDTH / 2 - 200
+        -- InitY --> WINDOW_HEIGHT / 2 - 185
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 - 200,
                 -- InitY - ImgH - OffsetY/2 - OffsetY/2
-                positionY = WINDOW_HEIGHT / 2 - 185 - 117 - 40/2 - 40/2,
+                positionY = WINDOW_HEIGHT / 2 - 150 - 110 - 40/2 - 40/2,
                 scaleX = 1.0,
                 scaleY = 1.0
             },
@@ -15,7 +15,7 @@ scene = {
                 text = "0$",
 
                 textFontName = "FranklinGothinBook.ttf",
-                textSize = 42.0,
+                textSize = 37.0,
 
                 textColorR = 0.0,
                 textColorG = 0.0,
@@ -35,10 +35,10 @@ scene = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 - 200,
                 -- InitY - ImgH / 2 - OffsetY/2
-                positionY = WINDOW_HEIGHT / 2 - 185 - 117/2 - 40/2,
+                positionY = WINDOW_HEIGHT / 2 - 150 - 110/2 - 40/2,
                 -- ButtonW * 2 + ButtonOffsetX + ImgOffsetW
                 scaleX = 71.0 * 2.0 + 45.0,
-                scaleY = 117.0
+                scaleY = 110.0
             },
             Image = {
                 imagePath = "stocks/military.png",
@@ -52,7 +52,7 @@ scene = {
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 - 200,
-                positionY = WINDOW_HEIGHT / 2 - 185,
+                positionY = WINDOW_HEIGHT / 2 - 150,
                 scaleX = 1.0,
                 scaleY = 1.0
             },
@@ -81,7 +81,7 @@ scene = {
                 -- InitX - ButtonW / 2 - ButtonOffsetX / 2
                 positionX = WINDOW_WIDTH / 2 - 200 - 71/2 - 50/2,
                 -- InitY + ButtonH / 2 + OffsetY / 2
-                positionY = WINDOW_HEIGHT / 2 - 185 + 71/2 + 40/2,
+                positionY = WINDOW_HEIGHT / 2 - 150 + 71/2 + 40/2,
                 scaleX = 71.0,
                 scaleY = 71.0
             },
@@ -133,7 +133,7 @@ scene = {
                 -- InitX - ButtonW / 2 - ButtonOffsetX / 2
                 positionX = WINDOW_WIDTH / 2 - 200 + 71/2 + 50/2,
                 -- InitY + ButtonH / 2 + OffsetY / 2
-                positionY = WINDOW_HEIGHT / 2 - 185 + 71/2 + 40/2,
+                positionY = WINDOW_HEIGHT / 2 - 150 + 71/2 + 40/2,
                 scaleX = 71.0,
                 scaleY = 71.0
             },
@@ -180,15 +180,15 @@ scene = {
         }
     },
 
-    -- CASA 2
+    -- ACCION 2
     {
-    -- InitX --> WINDOW_WIDTH / 2 - 200
-    -- InitY --> WINDOW_HEIGHT / 2 + 125
+        -- InitX --> WINDOW_WIDTH / 2 - 200
+        -- InitY --> WINDOW_HEIGHT / 2 + 125
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 - 200,
                 -- InitY - ImgH - OffsetY/2 - OffsetY/2
-                positionY = WINDOW_HEIGHT / 2 + 125 - 117 - 40/2 - 40/2,
+                positionY = WINDOW_HEIGHT / 2 + 125 - 110 - 40/2 - 40/2,
                 scaleX = 1.0,
                 scaleY = 1.0
             },
@@ -196,7 +196,7 @@ scene = {
                 text = "0$",
 
                 textFontName = "FranklinGothinBook.ttf",
-                textSize = 42.0,
+                textSize = 37.0,
 
                 textColorR = 0.0,
                 textColorG = 0.0,
@@ -216,10 +216,10 @@ scene = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 - 200,
                 -- InitY - ImgH / 2 - OffsetY/2
-                positionY = WINDOW_HEIGHT / 2 + 125 - 117/2 - 40/2,
+                positionY = WINDOW_HEIGHT / 2 + 125 - 110/2 - 40/2,
                 -- ButtonW * 2 + ButtonOffsetX + ImgOffsetW
                 scaleX = 71.0 * 2.0 + 45.0,
-                scaleY = 117.0
+                scaleY = 110.0
             },
             Image = {
                 imagePath = "stocks/agriculture.png",
@@ -361,15 +361,15 @@ scene = {
         }
     },
 
-    -- CASA 3
+    -- ACCION 3
     {
-    -- InitX --> WINDOW_WIDTH / 2 + 200
-    -- InitY --> WINDOW_HEIGHT / 2 - 185
+        -- InitX --> WINDOW_WIDTH / 2 + 200
+        -- InitY --> WINDOW_HEIGHT / 2 - 185
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 + 200,
                 -- InitY - ImgH - OffsetY/2 - OffsetY/2
-                positionY = WINDOW_HEIGHT / 2 - 185 - 117 - 40/2 - 40/2,
+                positionY = WINDOW_HEIGHT / 2 - 150 - 110 - 40/2 - 40/2,
                 scaleX = 1.0,
                 scaleY = 1.0
             },
@@ -377,7 +377,7 @@ scene = {
                 text = "0$",
 
                 textFontName = "FranklinGothinBook.ttf",
-                textSize = 42.0,
+                textSize = 37.0,
 
                 textColorR = 0.0,
                 textColorG = 0.0,
@@ -397,10 +397,10 @@ scene = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 + 200,
                 -- InitY - ImgH / 2 - OffsetY/2
-                positionY = WINDOW_HEIGHT / 2 - 185 - 117/2 - 40/2,
+                positionY = WINDOW_HEIGHT / 2 - 150 - 110/2 - 40/2,
                 -- ButtonW * 2 + ButtonOffsetX + ImgOffsetW
                 scaleX = 71.0 * 2.0 + 45.0,
-                scaleY = 117.0
+                scaleY = 110.0
             },
             Image = {
                 imagePath = "stocks/energy.png",
@@ -414,7 +414,7 @@ scene = {
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 + 200,
-                positionY = WINDOW_HEIGHT / 2 - 185,
+                positionY = WINDOW_HEIGHT / 2 - 150,
                 scaleX = 1.0,
                 scaleY = 1.0
             },
@@ -443,7 +443,7 @@ scene = {
                 -- InitX - ButtonW / 2 - ButtonOffsetX / 2
                 positionX = WINDOW_WIDTH / 2 + 200 - 71/2 - 50/2,
                 -- InitY + ButtonH / 2 + OffsetY / 2
-                positionY = WINDOW_HEIGHT / 2 - 185 + 71/2 + 40/2,
+                positionY = WINDOW_HEIGHT / 2 - 150 + 71/2 + 40/2,
                 scaleX = 71.0,
                 scaleY = 71.0
             },
@@ -495,7 +495,7 @@ scene = {
                 -- InitX - ButtonW / 2 - ButtonOffsetX / 2
                 positionX = WINDOW_WIDTH / 2 + 200 + 71/2 + 50/2,
                 -- InitY + ButtonH / 2 + OffsetY / 2
-                positionY = WINDOW_HEIGHT / 2 - 185 + 71/2 + 40/2,
+                positionY = WINDOW_HEIGHT / 2 - 150 + 71/2 + 40/2,
                 scaleX = 71.0,
                 scaleY = 71.0
             },
@@ -542,15 +542,15 @@ scene = {
         }
     },
 
--- CASA 4
-{
-    -- InitX --> WINDOW_WIDTH / 2 + 200
-    -- InitY --> WINDOW_HEIGHT / 2 + 125
+    -- ACCION 4
+    {
+        -- InitX --> WINDOW_WIDTH / 2 + 200
+        -- InitY --> WINDOW_HEIGHT / 2 + 125
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 + 200,
                 -- InitY - ImgH - OffsetY/2 - OffsetY/2
-                positionY = WINDOW_HEIGHT / 2 + 125 - 117 - 40/2 - 40/2,
+                positionY = WINDOW_HEIGHT / 2 + 125 - 110 - 40/2 - 40/2,
                 scaleX = 1.0,
                 scaleY = 1.0
             },
@@ -558,7 +558,7 @@ scene = {
                 text = "0$",
 
                 textFontName = "FranklinGothinBook.ttf",
-                textSize = 42.0,
+                textSize = 37.0,
 
                 textColorR = 0.0,
                 textColorG = 0.0,
@@ -578,10 +578,10 @@ scene = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 + 200,
                 -- InitY - ImgH / 2 - OffsetY/2
-                positionY = WINDOW_HEIGHT / 2 + 125 - 117/2 - 40/2,
+                positionY = WINDOW_HEIGHT / 2 + 125 - 110/2 - 40/2,
                 -- ButtonW * 2 + ButtonOffsetX + ImgOffsetW
                 scaleX = 71.0 * 2.0 + 45.0,
-                scaleY = 117.0
+                scaleY = 110.0
             },
             Image = {
                 imagePath = "stocks/medicine.jpg",
@@ -722,4 +722,20 @@ scene = {
             }
         }
     },
+    {
+        components = {
+            Transform = {
+                positionX = WINDOW_WIDTH / 2,
+                positionY = WINDOW_HEIGHT / 2 - 350,
+                scaleX = 1014/4,
+                scaleY = 221/4
+            },
+            Image = {
+                imagePath = "houses/HousingBanner.png",
+
+                windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | 
+                ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings
+            }
+        }
+    }
 }

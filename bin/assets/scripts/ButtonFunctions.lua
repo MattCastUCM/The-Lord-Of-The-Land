@@ -11,6 +11,7 @@ function startGame()
 	Tapioca.deleteScene("MainMenu")
 	Tapioca.loadScene("Game")
 	Tapioca.loadScene("EventScene")
+	_G.GameManager:start()
 end
 
 function restartGameOver()

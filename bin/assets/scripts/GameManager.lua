@@ -1,15 +1,14 @@
 function comp:awake()
     print("Awake GameManager")
     _G["GameManager"] = self
+    Tapioca.loadScene("MainMenu")
 end
 
 function comp:start()
-    Tapioca.loadScene("MainMenu")
-
     self.currentMoney = 1000
-    self.totalScore = -2
+    self.totalScore = 0
     self.currentDay = 1
-    self.highScore = 1203
+    self.highScore = 0
 
     self.propertySceneLoaded = false
     self.propertiesPrices = { 100, 200, 300, 400 }
@@ -30,17 +29,12 @@ function comp:update(deltaTime)
 
 end
 
-function comp:payTaxes()
-    self.taxes = self.taxes * 1.005
-    local taxesAux = math.floor(self.taxes + 0.5)
-    _G["EventManager"]:throwEvent("Taxes", "-" .. taxesAux .. "$")
-    self:spendMoney(taxesAux)
-end
-
 function comp:handleEvent(id)
-    if id == "nextDay" and self.totalScore < 0 then
+    if id == "NEXT_DAY" then
         self.currentDay = self.currentDay + 1
+    end
 
+    if id == "PAY_TAXES" then
         self:payTaxes()
     end
 
@@ -52,13 +46,21 @@ function comp:handleEvent(id)
         -- self:toWin()
         
     -- Derrota
-    elseif id == "nextDay" and self.totalScore < 0 then
+    elseif id == "NEXT_DAY" and self.totalScore < 0 then
         -- self:toGameOver()
         
     end
     
 	-- print("GameManger: "..id )
 end
+
+function comp:payTaxes()
+    self.taxes = self.taxes * 1.005
+    local taxesAux = math.floor(self.taxes + 0.5)
+    _G["EventManager"]:throwEvent("Taxes", "-" .. taxesAux .. "$")
+    self:spendMoney(taxesAux)
+end
+
 
 function comp:toGameOver()
     Tapioca.deleteScene("Game")
@@ -68,13 +70,6 @@ end
 function comp:toWin()
     Tapioca.deleteScene("Game")
     Tapioca.loadScene("WinScene")
-end
-
-function comp:updateValues()
-    -- recalcular totalScore 
-    
-	Tapioca.deleteScene("Game")
-	Tapioca.loadScene("WinScene")
 end
 
 -- DINERO

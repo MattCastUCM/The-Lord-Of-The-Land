@@ -32,7 +32,7 @@ function comp:handleEvent(id)
         self:draw()
         self.cont=self.cont+1
     end
-    if id == "nextDay" then
+    if id == "NEXT_DAY" then
         self:pushEvent("draw", false, true)
         self.mapa[self.cont2]= math.random(0, 10)
         self.cont2=self.cont2+1

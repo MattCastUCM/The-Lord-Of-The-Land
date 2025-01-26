@@ -6,6 +6,9 @@ function comp:start()
     self.textComponent = casts.fromComponent.Text(self.object:getComponent("Text"))
     self.textComponent.text = self.date
     self.os = require("os")
+    
+    self.lastMonth = 0
+    self:advance_day(self.date)
 end
 
 function comp:advance_day(date)
@@ -14,6 +17,12 @@ function comp:advance_day(date)
     month = tonumber(month)
     year = tonumber(year)
     local time = self.os.time({year = year, month = month, day = day}) + 86400 -- Add one day (86400 seconds)
+
+    if month ~= self.lastMonth then
+        self.lastMonth = month
+        self:pushEvent("PAY_TAXES", true)
+    end
+
     return self.os.date("%d-%m-%Y", time)
 end
 
@@ -25,8 +34,8 @@ function comp:update(deltaTime)
     self.time = self.time + deltaTime
 
 	if self.time >= self.changeTime and not self.done then
-        while self.time > self.changeTime and not self.done do
-            self:pushEvent("nextDay", true)
+        while self.time > self.changeTime do
+            self:pushEvent("NEXT_DAY", true)
             self.time = self.time - self.changeTime
             
             self.date = self:advance_day(self.date)

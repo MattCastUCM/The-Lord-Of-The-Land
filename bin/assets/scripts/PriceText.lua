@@ -17,9 +17,9 @@ function comp:handleEvent(id)
 end
 
 function comp:updatePrice()
-    local text = self.gameManager.propertiesPrices[self.index] .. "$"
+    local text = "$" .. self.gameManager.propertiesPrices[self.index] 
     if self.isStock then
-        text = self.gameManager.stocksPrices[self.index] .. "$"
+        local text = "$" .. self.gameManager.stocksPrices[self.index]
     end
     self.text.text = text
 end

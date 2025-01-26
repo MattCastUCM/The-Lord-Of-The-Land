@@ -1,8 +1,8 @@
 scene = {
     -- CASA 1
     {
-    -- InitX --> WINDOW_WIDTH / 2 - 200
-    -- InitY --> WINDOW_HEIGHT / 2 - 150
+        -- InitX --> WINDOW_WIDTH / 2 - 200
+        -- InitY --> WINDOW_HEIGHT / 2 - 150
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 - 200,
@@ -182,8 +182,8 @@ scene = {
 
     -- CASA 2
     {
-    -- InitX --> WINDOW_WIDTH / 2 - 200
-    -- InitY --> WINDOW_HEIGHT / 2 + 125
+        -- InitX --> WINDOW_WIDTH / 2 - 200
+        -- InitY --> WINDOW_HEIGHT / 2 + 125
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 - 200,
@@ -363,8 +363,8 @@ scene = {
 
     -- CASA 3
     {
-    -- InitX --> WINDOW_WIDTH / 2 + 200
-    -- InitY --> WINDOW_HEIGHT / 2 - 150
+        -- InitX --> WINDOW_WIDTH / 2 + 200
+        -- InitY --> WINDOW_HEIGHT / 2 - 150
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 + 200,
@@ -542,10 +542,10 @@ scene = {
         }
     },
 
--- CASA 4
-{
-    -- InitX --> WINDOW_WIDTH / 2 + 200
-    -- InitY --> WINDOW_HEIGHT / 2 + 125
+    -- CASA 4
+    {
+        -- InitX --> WINDOW_WIDTH / 2 + 200
+        -- InitY --> WINDOW_HEIGHT / 2 + 125
         components = {
             Transform = {
                 positionX = WINDOW_WIDTH / 2 + 200,
@@ -722,6 +722,8 @@ scene = {
             }
         }
     },
+
+    -- Banner
     {
         components = {
             Transform = {
