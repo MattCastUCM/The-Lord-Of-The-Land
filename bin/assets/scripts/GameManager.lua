@@ -22,7 +22,7 @@ function comp:start()
 end
 
 function comp:updateScore()
-    self.totalScore = 0.0
+    self.totalScore = self.currentMoney
 
     for i = 1, #self.propertiesPrices do
         self.totalScore = self.totalScore + self.propertiesPrices[i] * self.numberProperties[i]
@@ -63,11 +63,12 @@ end
 function comp:handleEvent(id)
     if id == "NEXT_DAY" then
         self.currentDay = self.currentDay + 1
+        self:updateScore()
+
     end
 
     if id == "NEXT_WEEK" then
         self:updatePrice()
-        self:updateScore()
     end
 
     if id == "PAY_TAXES" then
