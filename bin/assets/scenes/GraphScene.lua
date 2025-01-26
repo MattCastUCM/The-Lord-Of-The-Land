@@ -16,12 +16,12 @@ scene = {
                 scaleX = 1014/4,
                 scaleY = 221/4
             },
-            Image = {
-                imagePath = "casino/CasinoBanner.png",
+            -- Image = {
+            --     imagePath = "casino/CasinoBanner.png",
 
-                windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | 
-                ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoInputs
-            }
+            --     windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | 
+            --     ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoInputs
+            -- }
         }
     },
     {
