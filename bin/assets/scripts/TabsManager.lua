@@ -13,6 +13,15 @@ function comp:start()
     self.windowBgTransform.scale = newScale
 
     self.currScreenName = ""
+
+    Tapioca.loadScene("GraphScene")
+    Tapioca.loadScene("StocksScene")
+    Tapioca.loadScene("PropertyScene")
+    Tapioca.loadScene("CorruptionScene")
+    Tapioca.loadScene("CasinoScene")
+    Tapioca.loadScene("Game")
+
+    self.nUpdates = 0
 end 
 
 function comp:openWindow(index, sceneName)
@@ -67,7 +76,7 @@ function comp:handleEvent(id)
         end
 
         local newScale = self.windowBgTransform.scale
-        if self.windowVisible == false then
+        if not self.windowVisible then
             newScale.x = 0.0
             newScale.y = 0.0
             newScale.z = 0.0
@@ -78,6 +87,17 @@ function comp:handleEvent(id)
         end
         self.windowBgTransform.scale = newScale
 
+    end
+end
+
+function comp:update(deltaTime)
+    if self.nUpdates < 1 then
+        Tapioca.getScene("GraphScene").active = false
+        Tapioca.getScene("StocksScene").active = false
+        Tapioca.getScene("PropertyScene").active = false
+        Tapioca.getScene("CorruptionScene").active = false
+        Tapioca.getScene("CasinoScene").active = false
+        self.nUpdates = self.nUpdates + 1
     end
 end
 

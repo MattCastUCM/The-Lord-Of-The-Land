@@ -731,7 +731,7 @@ scene = {
                 scaleY = 221/4
             },
             Image = {
-                imagePath = "houses/HousingBanner.png",
+                imagePath = "stocks/TradingBanner.png",
 
                 windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | 
                 ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings

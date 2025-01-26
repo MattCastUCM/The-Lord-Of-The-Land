@@ -10,24 +10,15 @@ function comp:start()
     self.currentDay = 1
     self.highScore = 0
 
-    self.propertySceneLoaded = false
     self.propertiesPrices = { 100, 200, 300, 400 }
     self.numberProperties = { 0, 0, 0, 0 }
 
-    self.stocksSceneLoaded = false
     self.stocksPrices = { 0, 0, 0, 0 }
     self.numberStocks = { 0, 0, 0, 0 }
 
     self.taxes = 10.0
 end
 
-function comp:initComponent(variables)
-	
-end
-
-function comp:update(deltaTime)
-
-end
 
 function comp:handleEvent(id)
     if id == "NEXT_DAY" then
@@ -43,11 +34,10 @@ function comp:handleEvent(id)
 
     -- Victoria
     elseif id == "WIN" then
-        -- self:toWin()
-        
+        self:toWin()
     -- Derrota
     elseif id == "NEXT_DAY" and self.totalScore < 0 then
-        -- self:toGameOver()
+        self:toGameOver()
         
     end
     
@@ -63,24 +53,58 @@ end
 
 
 function comp:toGameOver()
+    Tapioca.deleteScene("GraphScene")
+    Tapioca.deleteScene("StocksScene")
+    Tapioca.deleteScene("PropertyScene")
+    Tapioca.deleteScene("CorruptionScene")
+    Tapioca.deleteScene("CasinoScene")
     Tapioca.deleteScene("Game")
+
+    Tapioca.deleteScene("EventScene")
+
     Tapioca.loadScene("GameOverScene")
 end
 
 function comp:toWin()
+    Tapioca.deleteScene("GraphScene")
+    Tapioca.deleteScene("StocksScene")
+    Tapioca.deleteScene("PropertyScene")
+    Tapioca.deleteScene("CorruptionScene")
+    Tapioca.deleteScene("CasinoScene")
     Tapioca.deleteScene("Game")
+
+    Tapioca.deleteScene("EventScene")
+
     Tapioca.loadScene("WinScene")
 end
 
 -- DINERO
 function comp:getMoney(money)
     self.currentMoney = self.currentMoney + money
+    self:calculateTotalCapital()
     self:pushEvent("MONEY_CHANGED", true)
 end
 
 function comp:spendMoney(money)
     self.currentMoney = self.currentMoney - money
+    self:calculateTotalCapital()
     self:pushEvent("MONEY_CHANGED", true)
+end
+
+function comp:calculateTotalCapital()
+    self.totalScore = self.currentMoney
+
+    local result = 0
+    for i, _ in pairs(self.propertiesPrices) do
+        -- Multiply corresponding elements
+        result = result + self.numberProperties[i] * self.propertiesPrices[i]
+    end
+    for i, _ in pairs(self.stocksPrices) do
+        -- Multiply corresponding elements
+        result = result + self.numberStocks[i] * self.stocksPrices[i]
+    end
+
+    self.totalScore = self.totalScore + result
 end
 
 -- PROPIEDADES

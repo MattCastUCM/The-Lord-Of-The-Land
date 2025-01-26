@@ -5,22 +5,6 @@ scene = {
                 windowWidth = WINDOW_WIDTH,
                 windowHeight = WINDOW_HEIGHT
             },
-            CameraComponent = {}
-        }
-    },
-    {
-        components = {
-            Transform = {
-                positionX = WINDOW_WIDTH - 10.0,
-                positionY = 10.0
-            },
-            Text = {
-                text = "$1023102",
-                textSize = 85.0,
-                textFontName = "BebasNeue-Regular.ttf"
-            },
-            MoneyText = { }
-            
         }
     },
     {
