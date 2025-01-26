@@ -54,3 +54,30 @@ end
 function sellProperty4()
 	_G.GameManager:sellProperty(4)
 end
+
+-- STOCKS
+function buyStocks1()
+    _G.GameManager:buyStocks(1)
+end
+function buyStocks2()
+    _G.GameManager:buyStocks(2)
+end
+function buyStocks3()
+    _G.GameManager:buyStocks(3)
+end
+function buyStocks4()
+    _G.GameManager:buyStocks(4)
+end
+
+function sellStocks1()
+    _G.GameManager:sellStocks(1)
+end
+function sellStocks2()
+    _G.GameManager:sellStocks(2)
+end
+function sellStocks3()
+	_G.GameManager:sellStocks(3)
+end
+function sellStocks4()
+	_G.GameManager:sellStocks(4)
+end

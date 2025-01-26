@@ -26,8 +26,8 @@ function comp:handleEvent(id)
 
         elseif id == "OPEN_STOCKS" then
             if self.activeWindow == 2 then
-                self.windowVisible = false
-                self.activeWindow = 0
+                -- self.windowVisible = false
+                -- self.activeWindow = 0
             else
                 self.windowVisible = true
                 self.activeWindow = 2
@@ -35,8 +35,8 @@ function comp:handleEvent(id)
 
         elseif id == "OPEN_HOUSING" then
             if self.activeWindow == 3 then
-                self.windowVisible = false
-                self.activeWindow = 0
+                -- self.windowVisible = false
+                -- self.activeWindow = 0
             else
                 self.windowVisible = true
                 self.activeWindow = 3
@@ -78,15 +78,27 @@ function comp:handleEvent(id)
     end
 end
 
-function leaveHousing()
-    if _G.GameManager.propertySceneLoaded then
-        local propertyScene = Tapioca.getScene("PropertyScene")
-        propertyScene.active = false
+function leaveScene(loadedName, scenename)
+    if _G.GameManager[loadedName] then
+        local scene = Tapioca.getScene(scenename)
+        scene.active = false
     end
 end
 
 function leaveScreens()
-    leaveHousing()
+    leaveScene("propertySceneLoaded", "PropertyScene")
+    leaveScene("stocksSceneLoaded", "StocksScene")
+end
+
+function openScreen(loadedName, sceneName)
+    local loaded = _G.GameManager[loadedName]
+    if not loaded then
+		_G.GameManager[loadedName] = true
+		Tapioca.loadScene(sceneName)
+	else
+		local scene = Tapioca.getScene(sceneName)
+		scene.active = true
+	end
 end
 
 function openGraph()
@@ -98,19 +110,16 @@ end
 function openStocks()
     leaveScreens()
 
+    openScreen("stocksSceneLoaded", "StocksScene")
+
     _G["GameManager"]:pushEvent("OPEN_STOCKS", true)
 end
 
 function openHousing()
     leaveScreens()
-    if not _G.GameManager.propertySceneLoaded then
-		_G.GameManager.propertySceneLoaded = true
-		Tapioca.loadScene("PropertyScene")
-	else
-		local propertyScene = Tapioca.getScene("PropertyScene")
-		propertyScene.active = true
-	end
 
+    openScreen("propertySceneLoaded", "PropertyScene")
+    
     _G["GameManager"]:pushEvent("OPEN_HOUSING", true)
 end
 

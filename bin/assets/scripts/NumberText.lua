@@ -6,6 +6,8 @@ end
 function comp:start()
     self.gameManager = _G["GameManager"]
 	self.text = casts.fromComponent.Text(self.object:getComponent("Text"))
+
+    self:updateNumber()
 end
 
 function comp:handleEvent(id)
@@ -17,7 +19,7 @@ end
 function comp:updateNumber()
     local text = self.gameManager.numberProperties[self.index] .. " properties"
     if self.isStock then
-        local text = self.gameManager.numberStocks[self.index] .. " stocks"
+        text = self.gameManager.numberStocks[self.index] .. " stocks"
     end
     self.text.text = text
 end

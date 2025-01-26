@@ -15,6 +15,7 @@ function comp:start()
     self.propertiesPrices = { 100, 200, 300, 400 }
     self.numberProperties = { 0, 0, 0, 0 }
 
+    self.stocksSceneLoaded = false
     self.stocksPrices = { 0, 0, 0, 0 }
     self.numberStocks = { 0, 0, 0, 0 }
 end
@@ -96,9 +97,15 @@ function comp:sellProperty(index)
     end
 end
 
+function comp:updatePropertyPrice(index, newPrice)
+    self.propertiesPrices[index] = newPrice
+    local eventName = "UPDATE_PRICE" .. index
+    self:pushEvent(eventName, true)
+end
+
 -- STOCKS
 -- PROPIEDADES
-function comp:buyStock(index)
+function comp:buyStocks(index)
     local price = self.stocksPrices[index]
     if self.currentMoney >= price then
         self.currentMoney = self.currentMoney - price
@@ -112,7 +119,7 @@ function comp:buyStock(index)
     end
 end
 
-function comp:sellStock(index)
+function comp:sellStocks(index)
     local nProperties = self.numberStocks[index]
     if nProperties > 0 then
         local price = self.stocksPrices[index]
@@ -127,3 +134,8 @@ function comp:sellStock(index)
     end
 end
 
+function comp:updateStocksPrice(index, newPrice)
+    self.stocksPrices[index] = newPrice
+    local eventName = "UPDATE_PRICE_" .. index
+    self:pushEvent(eventName, true)
+end
