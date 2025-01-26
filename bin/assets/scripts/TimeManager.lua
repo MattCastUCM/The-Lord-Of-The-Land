@@ -1,7 +1,7 @@
 function comp:start()
 	self.time = 0
     self.cont_day=4
-    self.changeTime = 150
+    self.changeTime = 250
     self.done = false
     self.date = "15-09-2005"
     self.textComponent = casts.fromComponent.Text(self.object:getComponent("Text"))
