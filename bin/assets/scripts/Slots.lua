@@ -41,12 +41,14 @@ function comp:initComponent(variables)
 end
 
 function comp:start()
+    self.ROLL_COST =  1000
+
     RollSlots = function ()
         if not self.activated then
             if self.nextFree then
                 self:roll()
-            elseif GameManager.currentMoney >= 10000 then
-                GameManager.currentMoney = GameManager.currentMoney - 10000
+            elseif GameManager.currentMoney >= self.ROLL_COST then
+                GameManager.currentMoney = GameManager.currentMoney - self.ROLL_COST
                 self:pushEvent("MONEY_CHANGED", true, false)
                 self:roll()
             else

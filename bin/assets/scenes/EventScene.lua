@@ -8,8 +8,8 @@ scene = {
     eventTitle = {
         components = {
             Transform = {
-                positionX = WINDOW_WIDTH / 2 ,
-                positionY = WINDOW_HEIGHT / 2 - 70/2,
+                positionX = 1714.0 ,
+                positionY = 280.0 - 70/2,
                 scaleX = 1.0,
                 scaleY = 1.0
             },
@@ -31,8 +31,8 @@ scene = {
     eventInfo = {
         components = {
             Transform = {
-                positionX = WINDOW_WIDTH / 2,
-                positionY = WINDOW_HEIGHT / 2 + 70/2,
+                positionX = 1714.0,
+                positionY = 280.0 + 70/2,
                 scaleX = 1.0,
                 scaleY = 1.0
             },
@@ -55,10 +55,10 @@ scene = {
         zIndex = 1,
         components = {
             Transform = {
-                positionX = WINDOW_WIDTH / 2,
-                positionY = WINDOW_HEIGHT / 2,
-                scaleX = 350.0,
-                scaleY = 350.0
+                positionX = 1714.0,
+                positionY = 280.0,
+                scaleX = 300.0,
+                scaleY = 300.0
             },
             Image = {
                 imagePath = "roundedSquare.png",
