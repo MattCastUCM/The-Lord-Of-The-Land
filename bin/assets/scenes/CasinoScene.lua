@@ -3,7 +3,9 @@ scene = {
         components = {
             Slots = {
                 windowWidth = WINDOW_WIDTH,
-                windowHeight = WINDOW_HEIGHT
+                windowHeight = WINDOW_HEIGHT,
+                imageFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove |
+                    ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings
             },
         }
     },

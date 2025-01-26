@@ -38,6 +38,7 @@ comp.time = 0
 function comp:initComponent(variables)
     self.windowWidth = variables.windowWidth
     self.windowHeight = variables.windowHeight
+    self.imageFlags = variables.imageFlags
 end
 
 function comp:start()
@@ -79,13 +80,14 @@ function comp:start()
     self.textObj:addComponent("Transform", params)
 
     params = {
-        imagePath = "casino/Roll.png"
+        imagePath = "casino/Roll.png",
+        windowFlags = self.imageFlags
     }
     self.img1 = casts.fromComponent.Image(self.obj1:addComponent("Image", params))
     self.img2 = casts.fromComponent.Image(self.obj2:addComponent("Image", params))
     self.img3 = casts.fromComponent.Image(self.obj3:addComponent("Image", params))
 
-    self.text = casts.fromComponent.Text(self.textObj:addComponent("Text", { text = "" }))
+    self.text = casts.fromComponent.Text(self.textObj:addComponent("Text", { text = "", textColorR = 0.0, textColorG = 0.0, textColorB = 0.0 }))
 end
 
 local function getResult()
