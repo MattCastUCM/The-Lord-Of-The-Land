@@ -52,9 +52,19 @@ function comp:chooseEvent(id)
     if not self.choose and  _G["GameManager"].currentMoney < 500 then
         return
     end
+
     self.choose = true
-
-
+    if id ~= self.b1 then
+        self.ButtonComponent_1.text = "---"
+    end
+    if id ~= self.b2 then
+        self.ButtonComponent_2.text = "---"
+    end
+    if id ~= self.b3 then
+        self.ButtonComponent_3.text = "---"
+    end
+    
+    
     _G["GameManager"].currentMoney =  _G["GameManager"].currentMoney - 500
 
     if math.random(0,1) > self.datos._texts[id].prob then
