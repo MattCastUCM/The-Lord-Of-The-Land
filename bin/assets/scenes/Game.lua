@@ -94,13 +94,6 @@ scene = {
         }
     },
 
-    Tabs = {
-		components = {
-			Transform = { },
-            TabsManager = { },
-		}
-    },
-
     moneyText = {
         components = {
             Transform = {
@@ -116,7 +109,6 @@ scene = {
             
         }
     },
-    
     desktopBg = {
         zIndex = 1,
         components = {
@@ -127,8 +119,11 @@ scene = {
                 scaleY = WINDOW_HEIGHT
             },
             Image = {
-                imagePath = "desktop/computerBg.png"
-            }
+                imagePath = "desktop/computerBg.png",
+                windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoInputs,
+            },
+            TabsManager = { },
+
         }
     },
     windowBg = {
@@ -141,7 +136,8 @@ scene = {
                 scaleY = WINDOW_HEIGHT
             },
             Image = {
-                imagePath = "desktop/windowFrame.png"
+                imagePath = "desktop/windowFrame.png",
+                windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoInputs,
             }
         }
     },
@@ -230,30 +226,30 @@ scene = {
             }
         }
     },
-
-    -- time = {
-    --     components={
-    --         Transform = {
-    --             positionX = 1290.0,
-    --             positionY = 839.0,
+    
+    time = {
+        components={
+            Transform = {
+                positionX = 1290.0,
+                positionY = 839.0,
               
-    --         },
-    --         Text = {
-    --             text = "",
-    --             textSize = 30.0,
-    --             textFontName = "FRABK.TTF"
-    --         },
-    --         TimeManager = { },
-    --     }
-    -- },
-    -- graph = {
-    --     components = {
-    --         Transform = {
-    --             positionX = WINDOW_WIDTH *0.065 + WINDOW_WIDTH *0.25,
-    --             positionY = WINDOW_HEIGHT*0.65,
-    --         },
-    --         DrawGraph = { }
-    --     }
-    -- },
+            },
+            Text = {
+                text = "",
+                textSize = 30.0,
+                textFontName = "FRABK.TTF"
+            },
+            TimeManager = { },
+        }
+    },
+    graph = {
+        components = {
+            Transform = {
+                positionX = WINDOW_WIDTH *0.065 + WINDOW_WIDTH *0.25,
+                positionY = WINDOW_HEIGHT*0.65,
+            },
+            DrawGraph = { }
+        }
+    },
 }
   

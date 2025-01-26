@@ -21,8 +21,8 @@ function comp:update(deltaTime)
 end
 
 function comp:handleEvent(id)
-    if id == "ev_EXIT_GAME" then
-    	-- Tapioca.exit()
+    if id == "ev_EXITGAME" then
+    	Tapioca.exit()
     end
 	print("GameManger: "..id )
 end

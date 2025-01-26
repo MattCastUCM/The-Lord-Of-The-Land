@@ -1,5 +1,5 @@
 events = {
-	ev_EXIT_GAME = {
+	ev_EXITGAME = {
         src = "ie_keyUp",
         control = 27     -- ESCAPE
     },
