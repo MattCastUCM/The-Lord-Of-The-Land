@@ -34,7 +34,7 @@ scene = {
             },  
         },
     },
-     light2 = {
+    light2 = {
         components = {
             Transform = {
                 positionY = 0.0,

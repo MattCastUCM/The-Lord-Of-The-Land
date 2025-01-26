@@ -29,7 +29,7 @@ function comp:update(deltaTime)
             self:pushEvent("nextDay", true, false)
             self.time = self.time - self.changeTime
             self.date = self:advance_day(self.date)
-            print(self.date)
+            -- print(self.date)
             self.textComponent.text = self.date
             if self.date == "15-09-2008" then
                 self.done = true

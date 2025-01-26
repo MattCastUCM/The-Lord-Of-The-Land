@@ -76,22 +76,52 @@ function comp:handleEvent(id)
         self.windowBgTransform.scale = newScale
 
     end
-    
 end
 
+function leaveHousing()
+    if _G.GameManager.propertySceneLoaded then
+        local propertyScene = Tapioca.getScene("PropertyScene")
+        propertyScene.active = false
+    end
+end
+
+function leaveScreens()
+    leaveHousing()
+end
 
 function openGraph()
-    _G["GameManager"]:pushEvent("OPEN_GRAPH", true, true)
+    leaveScreens()
+
+    _G["GameManager"]:pushEvent("OPEN_GRAPH", true)
 end
+
 function openStocks()
-    _G["GameManager"]:pushEvent("OPEN_STOCKS", true, true)
+    leaveScreens()
+
+    _G["GameManager"]:pushEvent("OPEN_STOCKS", true)
 end
+
 function openHousing()
-    _G["GameManager"]:pushEvent("OPEN_HOUSING", true, true)
+    leaveScreens()
+    if not _G.GameManager.propertySceneLoaded then
+		_G.GameManager.propertySceneLoaded = true
+		Tapioca.loadScene("PropertyScene")
+	else
+		local propertyScene = Tapioca.getScene("PropertyScene")
+		propertyScene.active = true
+	end
+
+    _G["GameManager"]:pushEvent("OPEN_HOUSING", true)
 end
+
 function openCorruption()
-    _G["GameManager"]:pushEvent("OPEN_CORRUPTION", true, true)
+    leaveScreens()
+
+    _G["GameManager"]:pushEvent("OPEN_CORRUPTION", true)
 end
+
 function openCasino()
-    _G["GameManager"]:pushEvent("OPEN_CASINO", true, true)
+    leaveScreens()
+
+    _G["GameManager"]:pushEvent("OPEN_CASINO", true)
 end

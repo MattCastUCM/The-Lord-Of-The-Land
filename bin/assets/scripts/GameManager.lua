@@ -6,10 +6,17 @@ end
 function comp:start()
     Tapioca.loadScene("MainMenu")
 
-    self.currentMoney = 0
+    self.currentMoney = 1000
     self.totalScore = 21312313
     self.currentDay = 1
     self.highScore = 1203
+
+    self.propertySceneLoaded = false
+    self.propertiesPrices = { 100, 200, 300, 400 }
+    self.numberProperties = { 0, 0, 0, 0 }
+
+    self.stocksPrices = { 0, 0, 0, 0 }
+    self.numberStocks = { 0, 0, 0, 0 }
 end
 
 function comp:initComponent(variables)
@@ -24,10 +31,71 @@ function comp:handleEvent(id)
     if id == "ev_EXITGAME" then
     	Tapioca.exit()
     end
-	print("GameManger: "..id )
+	-- print("GameManger: "..id )
 end
 
 function comp:emmmmmm()
     print("GameManger: emmmmmm" )
 
+end
+
+-- PROPIEDADES
+function comp:buyProperty(index)
+    local price = self.propertiesPrices[index]
+    if self.currentMoney >= price then
+        self.currentMoney = self.currentMoney - price
+
+        self.numberProperties[index] = self.numberProperties[index] + 1
+
+        local eventName = "INVERT_" .. index
+        self:pushEvent(eventName, true)
+
+        self:pushEvent("MONEY_CHANGED", true)
+    end
+end
+
+function comp:sellProperty(index)
+    local nProperties = self.numberProperties[index]
+    if nProperties > 0 then
+        local price = self.propertiesPrices[index]
+        self.currentMoney = self.currentMoney + price
+        
+        self.numberProperties[index] = nProperties - 1
+        
+        local eventName = "INVERT_" .. index
+        self:pushEvent(eventName, true)
+
+        self:pushEvent("MONEY_CHANGED", true)
+    end
+end
+
+-- STOCKS
+-- PROPIEDADES
+function comp:buyStock(index)
+    local price = self.stocksPrices[index]
+    if self.currentMoney >= price then
+        self.currentMoney = self.currentMoney - price
+
+        self.numberStocks[index] = self.numberStocks[index] + 1
+
+        local eventName = "INVERT_" .. index
+        self:pushEvent(eventName, true)
+
+        self:pushEvent("MONEY_CHANGED", true)
+    end
+end
+
+function comp:sellStock(index)
+    local nProperties = self.numberStocks[index]
+    if nProperties > 0 then
+        local price = self.stocksPrices[index]
+        self.currentMoney = self.currentMoney + price
+        
+        self.numberStocks[index] = nProperties - 1
+        
+        local eventName = "INVERT_" .. index
+        self:pushEvent(eventName, true)
+
+        self:pushEvent("MONEY_CHANGED", true)
+    end
 end
