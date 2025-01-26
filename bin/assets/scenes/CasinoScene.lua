@@ -17,7 +17,23 @@ scene = {
             },
             Button = {
                 onClickId = "RollSlots",
-                text = "Roll"
+                text = "Roll",
+            }
+        }
+    },
+    {
+        components = {
+            Transform = {
+                positionX = WINDOW_WIDTH / 2,
+                positionY = WINDOW_HEIGHT / 2 - 350,
+                scaleX = 1014/4,
+                scaleY = 221/4
+            },
+            Image = {
+                imagePath = "casino/CasinoBanner.png",
+
+                windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | 
+                ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoInputs
             }
         }
     }
