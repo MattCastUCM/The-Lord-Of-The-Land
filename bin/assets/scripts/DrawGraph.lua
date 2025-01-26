@@ -9,7 +9,7 @@ function comp:start()
     self.cont2=0
     self.posX = self.initPos.x
     self.posY = self.initPos.y
-    self.W= 20
+    self.W= 20*35/ (365*3)
     self.H= 20
     self.done = false
 
