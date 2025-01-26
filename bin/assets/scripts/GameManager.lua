@@ -63,9 +63,11 @@ end
 function comp:handleEvent(id)
     if id == "NEXT_DAY" then
         self.currentDay = self.currentDay + 1
+    end
+
+    if id == "NEXT_WEEK" then
         self:updatePrice()
         self:updateScore()
-
     end
 
     if id == "PAY_TAXES" then
