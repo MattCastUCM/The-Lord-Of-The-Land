@@ -14,7 +14,18 @@ scene = {
             },
             Button = {
                 onClickId = "Corruption_Button_1",
-                text = "Hola",
+                text = "",
+                textFontName = "FranklinGothinBook.ttf",
+                textSize = 20.0,
+                textColorNormalR = 31.0 / 255,
+                textColorNormalG = 31.0 / 255,
+                textColorNormalB = 31.0 / 255,
+                textColorHoverR = 31.0 / 255,
+                textColorHoverG = 31.0 / 255,
+                textColorHoverB = 31.0 / 255,
+                textColorActiveR = 31.0 / 255,
+                textColorActiveG = 31.0 / 255,
+                textColorActiveB = 31.0 / 255
             }
         }
     },
@@ -28,7 +39,18 @@ scene = {
             },
             Button = {
                 onClickId = "Corruption_Button_2",
-                text = "Hola",
+                text = "",
+                textFontName = "FranklinGothinBook.ttf",
+                textSize = 20.0,
+                textColorNormalR = 31.0 / 255,
+                textColorNormalG = 31.0 / 255,
+                textColorNormalB = 31.0 / 255,
+                textColorHoverR = 31.0 / 255,
+                textColorHoverG = 31.0 / 255,
+                textColorHoverB = 31.0 / 255,
+                textColorActiveR = 31.0 / 255,
+                textColorActiveG = 31.0 / 255,
+                textColorActiveB = 31.0 / 255
             },
         }
     },
@@ -42,7 +64,18 @@ scene = {
             },
             Button = {
                 onClickId = "Corruption_Button_3",
-                text = "Hola",
+                text = "",
+                textFontName = "FranklinGothinBook.ttf",
+                textSize = 20.0,
+                textColorNormalR = 31.0 / 255,
+                textColorNormalG = 31.0 / 255,
+                textColorNormalB = 31.0 / 255,
+                textColorHoverR = 31.0 / 255,
+                textColorHoverG = 31.0 / 255,
+                textColorHoverB = 31.0 / 255,
+                textColorActiveR = 31.0 / 255,
+                textColorActiveG = 31.0 / 255,
+                textColorActiveB = 31.0 / 255
             },
             
         }

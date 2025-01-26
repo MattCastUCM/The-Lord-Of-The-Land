@@ -222,6 +222,21 @@ scene = {
             }
         }
     },
+    graphImage = {
+        zIndex = 3,
+        components = {
+            Transform = {
+                positionX = WINDOW_WIDTH / 2,
+                positionY = WINDOW_HEIGHT / 2,
+                scaleX = WINDOW_WIDTH,
+                scaleY = WINDOW_HEIGHT
+            },
+            Image = {
+                imagePath = "desktop/GraphAxis.png",
+                windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoInputs,
+            }
+        }
+    },
     graphButton = {
         zIndex = 2,
         components = {
@@ -322,6 +337,7 @@ scene = {
             },
             TimeManager = { },
         }
-    }
+    },
+    
 }
   

@@ -1,8 +1,12 @@
 function comp:start()
     self.windowBg = self.object.scene:getHandler("windowBg")
     self.windowBgTransform = casts.fromComponent.Transform(self.windowBg:getComponent("Transform"))
+
+    self.graphAxes = self.object.scene:getHandler("graphImage")
+    self.graphAxesTransform = casts.fromComponent.Transform(self.graphAxes:getComponent("Transform"))
+
     self.windowVisible = false
-    self.activeWindow = 0
+    self.activeScreen = 0
 
     self.initScale = self.windowBgTransform.scale
 
@@ -11,6 +15,7 @@ function comp:start()
     newScale.y = 0.0
     newScale.z = 0.0
     self.windowBgTransform.scale = newScale
+    self.graphAxesTransform.scale = newScale
 
     self.currScreenName = ""
 
@@ -25,15 +30,15 @@ function comp:start()
 end 
 
 function comp:openWindow(index, sceneName)
-    if self.activeWindow == index then
+    if self.activeScreen == index then
         self.windowVisible = false
-        self.activeWindow = 0
+        self.activeScreen = 0
 
         self:closeCurrWindow()
 
     else
         self.windowVisible = true
-        self.activeWindow = index
+        self.activeScreen = index
 
         self:closeCurrWindow()
 
@@ -74,6 +79,18 @@ function comp:handleEvent(id)
             self:openWindow(5, "CasinoScene")
 
         end
+
+        local newScale = self.graphAxesTransform.scale
+        if self.activeScreen ~= 1 then
+            newScale.x = 0.0
+            newScale.y = 0.0
+            newScale.z = 0.0
+        else
+            newScale.x = self.initScale.x
+            newScale.y = self.initScale.y
+            newScale.z = self.initScale.z
+        end
+        self.graphAxesTransform.scale = newScale
 
         local newScale = self.windowBgTransform.scale
         if not self.windowVisible then

@@ -151,6 +151,9 @@ function comp:calculateTotalCapital()
     end
 
     self.totalScore = self.totalScore + result
+    if self.totalScore > self.highScore then
+        self.highScore = self.highScore
+    end
 end
 
 -- PROPIEDADES
