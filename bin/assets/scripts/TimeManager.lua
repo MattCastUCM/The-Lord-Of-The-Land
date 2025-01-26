@@ -1,6 +1,6 @@
 function comp:start()
 	self.time = 0
-    self.changeTime = 150
+    self.changeTime = 1
     self.done = false
     self.date = "15-09-2005"
     self.textComponent = casts.fromComponent.Text(self.object:getComponent("Text"))
@@ -26,14 +26,15 @@ function comp:update(deltaTime)
 
 	if self.time >= self.changeTime and not self.done then
         while self.time > self.changeTime do
-            self:pushEvent("nextDay", true, false)
+            self:pushEvent("nextDay", true, true)
             self.time = self.time - self.changeTime
+            
             self.date = self:advance_day(self.date)
-            -- print(self.date)
             self.textComponent.text = self.date
+            -- print(self.date)
             if self.date == "15-09-2008" then
                 self.done = true
-                self:pushEvent("END", true, false)
+                self:pushEvent("WIN", true, true)
             end
 	    end
     end

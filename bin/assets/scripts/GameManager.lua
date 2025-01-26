@@ -7,7 +7,7 @@ function comp:start()
     Tapioca.loadScene("MainMenu")
 
     self.currentMoney = 1000
-    self.totalScore = 21312313
+    self.totalScore = -2
     self.currentDay = 1
     self.highScore = 1203
 
@@ -24,20 +24,47 @@ function comp:initComponent(variables)
 end
 
 function comp:update(deltaTime)
-	
+
 end
 
 function comp:handleEvent(id)
+    if id == "nextDay" and self.totalScore < 0 then
+        self.currentDay = self.currentDay + 1
+    end
+
     if id == "ev_EXITGAME" then
     	Tapioca.exit()
+
+    -- Victoria
+    elseif id == "WIN" then
+        -- self:toWin()
+        
+    -- Derrota
+    elseif id == "nextDay" and self.totalScore < 0 then
+        -- self:toGameOver()
+        
     end
+    
 	-- print("GameManger: "..id )
 end
 
-function comp:emmmmmm()
-    print("GameManger: emmmmmm" )
-
+function comp:toGameOver()
+    Tapioca.deleteScene("Game")
+    Tapioca.loadScene("GameOverScene")
 end
+
+function comp:toWin()
+    Tapioca.deleteScene("Game")
+    Tapioca.loadScene("WinScene")
+end
+
+function comp:updateValues()
+    -- recalcular totalScore 
+    
+	Tapioca.deleteScene("Game")
+	Tapioca.loadScene("WinScene")
+end
+
 
 -- PROPIEDADES
 function comp:buyProperty(index)
@@ -99,3 +126,4 @@ function comp:sellStock(index)
         self:pushEvent("MONEY_CHANGED", true)
     end
 end
+

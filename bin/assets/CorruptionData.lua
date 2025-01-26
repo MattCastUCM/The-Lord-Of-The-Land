@@ -8,7 +8,7 @@ return {
     },
     _texts={
         { 
-            text = "Se ha encontrado una enorme reserva de petróleo , pero está en un parque natural protegido habría que cambiar la legislación…", 
+            text = "A huge oil reserve has been found, but it is in a protected natural park. The legislation would need to be changed...", 
             prob = 0.5,
             Military=15,
             Agricultural=0,
@@ -17,7 +17,7 @@ return {
             Housing=0 
         },
         { 
-            text = "Oh no una prueba militar de un gobierno extranjero ha alcanzado una de nuestras bases deberíamos declarar la guerra", 
+            text = "Oh no! A military test from a foreign government has hit one of our bases! We should declare war!", 
             prob = 0.5,
             Military=15,
             Agricultural=0,
@@ -26,7 +26,7 @@ return {
             Housing=0 
         },
         { 
-            text = "Un congreso internacional  quiere liberar las patentes de síntesis de un medicamento muy demandado , pero seguro que podemos pagar para que cambien de idea", 
+            text = "An international conference wants to release the patents for the synthesis of a highly sought-after medicine, but we can surely pay to change their minds.", 
             prob = 0.5,
             Military=0,
             Agricultural=0,
@@ -35,7 +35,7 @@ return {
             Housing=0 
         },
         { 
-            text = "Uno de los productores de grano  más grande del país tiene la mayor parte de sus campos sobre un enorme depósito de uranio irá siendo hora de expropiar.", 
+            text = "One of the country's largest grain producers has most of its fields sitting on a huge uranium deposit. It's time to expropriate some of the land.", 
             prob = 0.5,
             Military=0,
             Agricultural=-15,
@@ -44,7 +44,7 @@ return {
             Housing=0 
         },
         { 
-            text = "Una universidad ha logrado confeccionar vacunas para una de las ultimas variantes mas agresivas de la gripe , y quieren hacer el conocimiento publico y gratuito .No si nosotros lo compramos antes ", 
+            text = "A university has managed to develop vaccines for one of the latest, most aggressive flu strains, and they want to make the knowledge public and free! Not if we buy it first.", 
             prob = 0.5,
             Military=0,
             Agricultural=0,
@@ -53,7 +53,7 @@ return {
             Housing=0
         },
         { 
-            text = "Las limitaciones a los alquileres turísticos están limitando enormemente los beneficios que se pueden obtener de las propiedades pero eso se podría cambiar ", 
+            text = "Restrictions on tourist rentals are severely limiting the profits that can be made from properties, but that could change...", 
             prob = 0.5,
             Military=0,
             Agricultural=0,
@@ -62,7 +62,7 @@ return {
             Housing=15 
         },
         { 
-            text = "Un país extranjero ha conseguido crear fuentes de energía mejores y más baratas deberíamos poner aranceles para evitar que la gente deje de comprar las nuestras.", 
+            text = "A foreign country has managed to create better and cheaper sources of energy. We should tax them to make people keep buying ours.", 
             prob = 0.5,
             Military=0,
             Agricultural=0,
@@ -70,7 +70,7 @@ return {
             Healthcare=0,
             Housing=0 
         },{ 
-            text = "Un pacto diplomático podría cerrar varios conflictos abiertos , si aceptamos su oferta de reservas de petroleo.", 
+            text = "A diplomatic pact could end several open conflicts if we accept their offer of oil reserves.", 
             prob = 0.5,
             Military=-15,
             Agricultural=-15,
@@ -78,7 +78,7 @@ return {
             Healthcare=0,
             Housing=15 
         },{ 
-            text = "Deberíamos legalizar más compuestos extremadamente adictivos parecen un buen mercado", 
+            text = "We should legalize more extremely addictive compounds, they seem like a good market", 
             prob = 0.5,
             Military=0,
             Agricultural=0,
@@ -87,7 +87,7 @@ return {
             Housing=0
         },
         { 
-            text = "Muchos proyectos nuevos de construcción podrían paralizarse , hay un conglomerado de productores de cereales que pagaría muy bien por los terrenos.", 
+            text = "Many new construction projects could be halted. There is a conglomerate of grain producers that would pay very well for the land.", 
             prob = 0.5,
             Military=-15,
             Agricultural=20,

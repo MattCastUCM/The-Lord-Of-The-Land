@@ -37,7 +37,7 @@ function comp:handleEvent(id)
         self.mapa[self.cont2]= math.random(0, 10)
         self.cont2=self.cont2+1
     end
-    if id == "END" then
+    if id == "WIN" then
         self.done = true
     end
 end

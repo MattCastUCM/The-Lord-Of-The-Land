@@ -59,7 +59,7 @@ scene = {
                 scaleY = 118.0
             },
             ImageTextButton = {
-                onClickId = "toMainMenu",
+                onClickId = "restartGameOver",
                 imagePathNormal = "buttons/mainMenuNormal.png",
                 imagePathHover = "buttons/mainMenuHovered.png",
                 imagePathActive = "buttons/mainMenuPressed.png",

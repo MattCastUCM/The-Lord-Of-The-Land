@@ -3,7 +3,7 @@ function comp:awake()
 end
 
 function comp:start()
-    self.datos = require("./assets/datos")
+    self.datos = require("./assets/corruptionData")
     local total = #self.datos
     print("Total de datos: " .. total)
     self:imprimirDatos()
