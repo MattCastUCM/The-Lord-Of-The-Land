@@ -1,9 +1,9 @@
 local icons = {
-    "Cherry",
-    "Lemon",
-    "Orange",
-    "Grapes",
-    "Sevens"
+    "cherry",
+    "lemon",
+    "orange",
+    "grapes",
+    "sevens"
 }
 -- "Again" va fuera
 
