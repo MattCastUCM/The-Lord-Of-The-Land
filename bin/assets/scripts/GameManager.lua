@@ -13,16 +13,57 @@ function comp:start()
     self.propertiesPrices = { 100, 200, 300, 400 }
     self.numberProperties = { 0, 0, 0, 0 }
 
-    self.stocksPrices = { 0, 0, 0, 0 }
+
+    self.stocksSceneLoaded = false
+    self.stocksPrices = { 20, 50, 80, 42 }
     self.numberStocks = { 0, 0, 0, 0 }
 
     self.taxes = 10.0
 end
 
+function comp:updateScore()
+    self.totalScore = 0.0
+
+    for i = 1, #self.propertiesPrices do
+        self.totalScore = self.totalScore + self.propertiesPrices[i] * self.numberProperties[i]
+    end
+    for i = 1, #self.stocksPrices do
+        self.totalScore = self.totalScore + self.stocksPrices[i] * self.numberStocks[i]
+        
+    end
+
+    if self.totalScore > self.highScore then
+        self.highScore = self.totalScore
+    end
+end
+
+function comp:updatePrice()
+    for i = 1, #self.propertiesPrices do
+        local rnd=(math.random() * 0.4) - 0.2 +1
+        self.propertiesPrices[i] = self.propertiesPrices[i] * rnd
+        self.propertiesPrices[i]=  math.max(0, self.propertiesPrices[i])
+
+    end
+    for i = 1, #self.stocksPrices do
+        local rnd=(math.random() * 0.4) - 0.2 +1
+        self.stocksPrices[i] = self.stocksPrices[i] * rnd
+        self.stocksPrices[i]=  math.max(0, self.stocksPrices[i])
+    end
+end
+
+function comp:initComponent(variables)
+	
+end
+
+function comp:update(deltaTime)
+end
 
 function comp:handleEvent(id)
     if id == "NEXT_DAY" then
         self.currentDay = self.currentDay + 1
+        self:updatePrice()
+        self:updateScore()
+
     end
 
     if id == "PAY_TAXES" then
@@ -175,3 +216,4 @@ function comp:updateStocksPrice(index, newPrice)
     local eventName = "UPDATE_PRICE_" .. index
     self:pushEvent(eventName, true)
 end
+

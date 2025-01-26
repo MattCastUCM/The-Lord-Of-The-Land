@@ -10,7 +10,7 @@ function comp:start()
     self.posX = self.initPos.x
     self.posY = self.initPos.y
     self.W= 20*35/ (365*3)
-    self.H= 20
+    self.H= 0.02
     self.done = false
 
 end
@@ -34,7 +34,7 @@ function comp:handleEvent(id)
     end
     if id == "NEXT_DAY" then
         self:pushEvent("draw", false, true)
-        self.mapa[self.cont2]= math.random(0, 10)
+        self.mapa[self.cont2]= _G["GameManager"].totalScore
         self.cont2=self.cont2+1
     end
     if id == "WIN" then
