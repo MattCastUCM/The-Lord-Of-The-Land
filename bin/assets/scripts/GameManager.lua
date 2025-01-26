@@ -5,7 +5,7 @@ function comp:awake()
 end
 
 function comp:start()
-    self.currentMoney = 1000
+    self.currentMoney = 10000
     self.totalScore = 0
     self.currentDay = 1
     self.highScore = 0
@@ -42,12 +42,14 @@ function comp:updatePrice()
         local rnd=(math.random() * 0.4) - 0.2 +1
         self.propertiesPrices[i] = self.propertiesPrices[i] * rnd
         self.propertiesPrices[i]=  math.max(0, self.propertiesPrices[i])
+        self:pushEvent("UPDATE_PRICE_" .. i, true)
 
     end
     for i = 1, #self.stocksPrices do
         local rnd=(math.random() * 0.4) - 0.2 +1
         self.stocksPrices[i] = self.stocksPrices[i] * rnd
         self.stocksPrices[i]=  math.max(0, self.stocksPrices[i])
+        self:pushEvent("UPDATE_PRICE_" .. i, true)
     end
 end
 

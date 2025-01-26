@@ -5,9 +5,9 @@ end
 function comp:start()
     self.datos = require("./assets/corruptionData")
     self.choose = false
-    local total = #self.datos
-    print("Total de datos: " .. total)
-    self:imprimirDatos()
+    -- local total = #self.datos
+    -- print("Total de datos: " .. total)
+    -- self:imprimirDatos()
     
     self.Button_1 = self.object.scene:getHandler("Button_1")
     self.Button_2 = self.object.scene:getHandler("Button_2")
@@ -49,12 +49,30 @@ end
 
 
 function comp:chooseEvent(id)
-    if self.choose then
+    if not self.choose and  _G["GameManager"].currentMoney < 500 then
         return
     end
     self.choose = true
+
+
+    _G["GameManager"].currentMoney =  _G["GameManager"].currentMoney - 500
+
+    if math.random(0,1) > self.datos._texts[id].prob then
+        print("CorruptionManager: No")
+       return 
+    end
+    print("CorruptionManager: Yes")
+
     for nombre, valor in pairs(self.datos._type) do
         print(nombre .. " = " .. self.datos._texts[id][nombre]    )
+        if valor < 5 then
+            _G["GameManager"]:updateStocksPrice(valor, _G["GameManager"].stocksPrices[valor] * (100.0+ self.datos._texts[id][nombre]) /100.0)
+            
+        elseif valor == 5 then
+            for i = 1, #_G["GameManager"].propertiesPrices do
+                _G["GameManager"]:updatePropertyPrice(i, _G["GameManager"].propertiesPrices[i] * (100.0 + self.datos._texts[id][nombre]) / 100.0)
+            end
+        end
     end
 end
 
