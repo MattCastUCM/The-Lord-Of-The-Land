@@ -5,7 +5,7 @@ scene = {
                 windowWidth = WINDOW_WIDTH,
                 windowHeight = WINDOW_HEIGHT,
                 imageFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove |
-                    ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings
+                    ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoInputs
             },
         }
     },
@@ -38,5 +38,22 @@ scene = {
                 ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoInputs
             }
         }
+    },
+    {
+        components = {
+            Transform = {
+                positionX = WINDOW_WIDTH / 2 - 15,
+                positionY = WINDOW_HEIGHT / 2 - 20,
+                scaleX = 1014/2,
+                scaleY = 659/2
+            },
+            Image = {
+                imagePath = "casino/slotmachine.png",
+
+                windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | 
+                ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoInputs
+            }
+        },
+        zIndex = 20
     }
 }
