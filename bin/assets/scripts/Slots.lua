@@ -64,18 +64,20 @@ function comp:start()
     self.obj3 = ourScene:addObject("", 10)
     self.textObj = ourScene:addObject("", 10)
 
+    local separation = 125
+
     local params = {
-        positionX = self.windowWidth / 2 - 200,
+        positionX = self.windowWidth / 2 - separation,
         positionY = self.windowHeight / 2,
         scaleX = 100.0,
         scaleY = 100.0
     }
     self.obj1:addComponent("Transform", params)
-    params.positionX = params.positionX + 200
+    params.positionX = params.positionX + separation
     self.obj2:addComponent("Transform", params)
-    params.positionX = params.positionX + 200
+    params.positionX = params.positionX + separation
     self.obj3:addComponent("Transform", params)
-    params.positionX = params.positionX - 200
+    params.positionX = params.positionX - separation
     params.positionY = params.positionY + 200
     self.textObj:addComponent("Transform", params)
 
