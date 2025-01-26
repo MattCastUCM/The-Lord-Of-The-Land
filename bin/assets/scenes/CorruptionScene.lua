@@ -13,7 +13,7 @@ scene = {
                 scaleY = 200.0
             },
             Button = {
-                onClickId = "startGame",
+                onClickId = "Corruption_Button_1",
                 text = "Hola",
             }
         }
@@ -27,7 +27,7 @@ scene = {
                 scaleY = 200.0
             },
             Button = {
-                onClickId = "startGame",
+                onClickId = "Corruption_Button_2",
                 text = "Hola",
             },
         }
@@ -41,7 +41,7 @@ scene = {
                 scaleY = 200.0
             },
             Button = {
-                onClickId = "startGame",
+                onClickId = "Corruption_Button_3",
                 text = "Hola",
             },
             

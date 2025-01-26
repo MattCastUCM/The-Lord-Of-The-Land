@@ -103,6 +103,7 @@ end
 
 function openGraph()
     leaveScreens()
+    openScreen("graphSceneLoaded", "GraphScene")
 
     _G["GameManager"]:pushEvent("OPEN_GRAPH", true)
 end
@@ -125,6 +126,7 @@ end
 
 function openCorruption()
     leaveScreens()
+    openScreen("corruptionSceneLoaded", "CorruptionScene")
 
     _G["GameManager"]:pushEvent("OPEN_CORRUPTION", true)
 end
