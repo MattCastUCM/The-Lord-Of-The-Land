@@ -12,7 +12,7 @@ scene = {
                 scaleY = 1.0
             },
             Text = {
-                text = "200$",
+                text = "0$",
 
                 textFontName = "FranklinGothinBook.ttf",
                 textSize = 42.0,
@@ -193,7 +193,7 @@ scene = {
                 scaleY = 1.0
             },
             Text = {
-                text = "200$",
+                text = "0$",
 
                 textFontName = "FranklinGothinBook.ttf",
                 textSize = 42.0,
@@ -374,7 +374,7 @@ scene = {
                 scaleY = 1.0
             },
             Text = {
-                text = "200$",
+                text = "0$",
 
                 textFontName = "FranklinGothinBook.ttf",
                 textSize = 42.0,
@@ -555,7 +555,7 @@ scene = {
                 scaleY = 1.0
             },
             Text = {
-                text = "200$",
+                text = "0$",
 
                 textFontName = "FranklinGothinBook.ttf",
                 textSize = 42.0,
