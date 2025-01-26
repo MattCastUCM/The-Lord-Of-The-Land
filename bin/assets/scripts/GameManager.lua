@@ -1,10 +1,13 @@
 function comp:awake()
     print("Awake GameManager")
     _G["GameManager"] = self
-    Tapioca.loadScene("MainMenu")
 end
 
 function comp:start()
+    Tapioca.loadScene("MainMenu")
+end
+
+function comp:startGame()
     self.currentMoney = 10000
     self.totalScore = 0
     self.currentDay = 1
@@ -19,6 +22,8 @@ function comp:start()
     self.numberStocks = { 0, 0, 0, 0 }
 
     self.taxes = 10.0
+
+    Tapioca.loadScene("Game")
 end
 
 function comp:updateScore()

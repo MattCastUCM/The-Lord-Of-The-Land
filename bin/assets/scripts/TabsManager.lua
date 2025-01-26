@@ -24,7 +24,6 @@ function comp:start()
     Tapioca.loadScene("PropertyScene")
     Tapioca.loadScene("CorruptionScene")
     Tapioca.loadScene("CasinoScene")
-    Tapioca.loadScene("Game")
 
     self.nUpdates = 0
 end 
