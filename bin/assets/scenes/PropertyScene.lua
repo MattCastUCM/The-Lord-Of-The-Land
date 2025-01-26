@@ -736,7 +736,7 @@ scene = {
                 imagePath = "houses/HousingBanner.png",
 
                 windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove | 
-                ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings
+                ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoInputs
             }
         }
     }
