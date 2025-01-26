@@ -17,11 +17,11 @@ local probs = {
 }
 
 local rewards = {
-    Cherry = 5000,
-    Lemon = 10000,
-    Orange = 100000,
-    Grapes = 500000,
-    Sevens = 10000000
+    Cherry = 500,
+    Lemon = 1000,
+    Orange = 10000,
+    Grapes = 50000,
+    Sevens = 1000000
 }
 
 -- Comprobamos que las probabilidades sumen 100%
@@ -58,10 +58,10 @@ function comp:start()
     end
 
     local ourScene = self.object.scene
-    self.obj1 = ourScene:addObject("", 1)
-    self.obj2 = ourScene:addObject("", 1)
-    self.obj3 = ourScene:addObject("", 1)
-    self.textObj = ourScene:addObject("", 1)
+    self.obj1 = ourScene:addObject("", 10)
+    self.obj2 = ourScene:addObject("", 10)
+    self.obj3 = ourScene:addObject("", 10)
+    self.textObj = ourScene:addObject("", 10)
 
     local params = {
         positionX = self.windowWidth / 2 - 200,
