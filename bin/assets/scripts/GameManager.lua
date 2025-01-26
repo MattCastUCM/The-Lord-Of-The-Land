@@ -18,6 +18,8 @@ function comp:start()
     self.stocksSceneLoaded = false
     self.stocksPrices = { 0, 0, 0, 0 }
     self.numberStocks = { 0, 0, 0, 0 }
+
+    self.taxes = 10.0
 end
 
 function comp:initComponent(variables)
@@ -28,9 +30,18 @@ function comp:update(deltaTime)
 
 end
 
+function comp:payTaxes()
+    self.taxes = self.taxes * 1.005
+    local taxesAux = math.floor(self.taxes + 0.5)
+    _G["EventManager"]:throwEvent("Taxes", "-" .. taxesAux .. "$")
+    self:spendMoney(taxesAux)
+end
+
 function comp:handleEvent(id)
     if id == "nextDay" and self.totalScore < 0 then
         self.currentDay = self.currentDay + 1
+
+        self:payTaxes()
     end
 
     if id == "ev_EXITGAME" then
@@ -66,19 +77,27 @@ function comp:updateValues()
 	Tapioca.loadScene("WinScene")
 end
 
+-- DINERO
+function comp:getMoney(money)
+    self.currentMoney = self.currentMoney + money
+    self:pushEvent("MONEY_CHANGED", true)
+end
+
+function comp:spendMoney(money)
+    self.currentMoney = self.currentMoney - money
+    self:pushEvent("MONEY_CHANGED", true)
+end
 
 -- PROPIEDADES
 function comp:buyProperty(index)
     local price = self.propertiesPrices[index]
     if self.currentMoney >= price then
-        self.currentMoney = self.currentMoney - price
+        self:spendMoney(price)
 
         self.numberProperties[index] = self.numberProperties[index] + 1
 
         local eventName = "INVERT_" .. index
         self:pushEvent(eventName, true)
-
-        self:pushEvent("MONEY_CHANGED", true)
     end
 end
 
@@ -86,14 +105,12 @@ function comp:sellProperty(index)
     local nProperties = self.numberProperties[index]
     if nProperties > 0 then
         local price = self.propertiesPrices[index]
-        self.currentMoney = self.currentMoney + price
-        
+        self:getMoney(price)
+
         self.numberProperties[index] = nProperties - 1
         
         local eventName = "INVERT_" .. index
         self:pushEvent(eventName, true)
-
-        self:pushEvent("MONEY_CHANGED", true)
     end
 end
 

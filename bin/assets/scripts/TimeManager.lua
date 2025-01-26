@@ -26,7 +26,7 @@ function comp:update(deltaTime)
 
 	if self.time >= self.changeTime and not self.done then
         while self.time > self.changeTime do
-            self:pushEvent("nextDay", true, true)
+            self:pushEvent("nextDay", true)
             self.time = self.time - self.changeTime
             
             self.date = self:advance_day(self.date)
@@ -34,7 +34,7 @@ function comp:update(deltaTime)
             -- print(self.date)
             if self.date == "15-09-2008" then
                 self.done = true
-                self:pushEvent("WIN", true, true)
+                self:pushEvent("WIN", true)
             end
 	    end
     end

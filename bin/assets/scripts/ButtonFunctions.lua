@@ -10,6 +10,7 @@ end
 function startGame()
 	Tapioca.deleteScene("MainMenu")
 	Tapioca.loadScene("Game")
+	Tapioca.loadScene("EventScene")
 end
 
 function restartGameOver()
